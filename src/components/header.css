@@ -1,0 +1,18 @@
+.header {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin: 0 0 1rem;
+}
+
+h1.header-1 {
+    font-size: 24px;
+    line-height: 31.2px;
+    color: #a5c4f3;
+}
+
+h2.header-2 {
+    font-size: 18px;
+    line-height: 23.4px;
+    font-style: italic;
+    color: #ebebeb;
+}

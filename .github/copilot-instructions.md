@@ -107,6 +107,12 @@ export function ComponentName({ mode, children }: ComponentProps) {
 - Use `useMemo` for expensive computations
 - Handle edge cases explicitly (null, undefined, empty arrays)
 
+### Dependency Management
+
+- **Always use `--save-exact`** when installing npm dependencies to ensure exact version pinning
+- Example: `npm install --save-exact package-name` or `npm install --save-exact --save-dev package-name`
+- This ensures reproducible builds and prevents unexpected issues from minor version updates
+
 ### Performance Considerations
 
 - Use React.memo for expensive components when appropriate

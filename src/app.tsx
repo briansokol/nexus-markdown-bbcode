@@ -1,7 +1,7 @@
 import '@/app.css';
 import { Bbcode } from '@/bbcode';
 import { Markdown } from '@/markdown';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
 
 /**
  * localStorage key for storing markdown content
@@ -74,7 +74,7 @@ export function App() {
      * @param event - File input change event
      */
     const handleFileRead = useCallback(
-        (event: React.ChangeEvent<HTMLInputElement>) => {
+        (event: ChangeEvent<HTMLInputElement>) => {
             const file = event.target.files?.[0];
             if (!file) return;
 
@@ -136,7 +136,7 @@ export function App() {
      * Handler for filename input change
      */
     const handleFileNameChange = useCallback(
-        (e: React.ChangeEvent<HTMLInputElement>) => {
+        (e: ChangeEvent<HTMLInputElement>) => {
             const name = e.target.value;
             setFileName(name);
             saveFileNameToLocalStorage(name);
@@ -148,7 +148,7 @@ export function App() {
      * Handler for markdown textarea change
      */
     const handleMarkdownChange = useCallback(
-        (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        (e: ChangeEvent<HTMLTextAreaElement>) => {
             const content = e.target.value;
             setMarkdownInput(content);
             saveToLocalStorage(content);

@@ -11,7 +11,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . && stylelint \"src/**/*.css\"",
-    "lint:js": "eslint .",
+    "lint:js": "eslint . --config=eslint.config.js",
     "lint:css": "stylelint \"src/**/*.css\"",
     "format": "prettier --write \"src/**/*.{js,ts,tsx,json,css}\"",
     "preview": "vite preview",

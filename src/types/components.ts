@@ -1,4 +1,6 @@
+import type { ReactNode } from 'react';
+
 export interface BBCodeComponentProps {
     mode: 'html' | 'bbcode';
-    children?: React.ReactNode;
+    children?: ReactNode;
 }

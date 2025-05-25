@@ -6,7 +6,7 @@ interface AnchorProps extends BBCodeComponentProps {
     href?: string;
 }
 
-export function Anchor({ mode, href, children = '' }: AnchorProps) {
+export function Anchor({ mode, href, children }: AnchorProps) {
     const cleanChildren = useCleanChildren(children);
 
     return mode === 'bbcode' ? (

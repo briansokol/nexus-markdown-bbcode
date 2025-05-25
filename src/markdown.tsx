@@ -77,6 +77,18 @@ export function Markdown({ markdownInput, mode }: MarkdownProps) {
                 img({ node, ...props }) {
                     return <Image mode={mode} {...props} />;
                 },
+                // red({ node, ...props }) {
+                //     return <Color mode={mode} color="red" {...props} />;
+                // },
+                // green({ node, ...props }) {
+                //     return <Color mode={mode} color="green" {...props} />;
+                // },
+                // blue({ node, ...props }) {
+                //     return <Color mode={mode} color="blue" {...props} />;
+                // },
+                // yellow({ node, ...props }) {
+                //     return <Color mode={mode} color="yellow" {...props} />;
+                // },
             }}
         >
             {markdownInput}

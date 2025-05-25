@@ -19,6 +19,10 @@ function cleanString(input: string): string {
  * @returns The cleaned ReactNode
  */
 export function cleanBBCode(input: ReactNode | ReactNode[]): ReactNode | ReactNode[] {
+    if (input === null || input === undefined) {
+        return input;
+    }
+
     // If input is a string, clean it
     if (typeof input === 'string') {
         return cleanString(input);

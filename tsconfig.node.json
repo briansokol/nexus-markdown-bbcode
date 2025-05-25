@@ -21,5 +21,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
+  "files": ["src/custom-tags.d.ts"],
   "include": ["vite.config.ts"]
 }

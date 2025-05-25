@@ -12,15 +12,20 @@ const headerLevel = {
     '2': '4',
 };
 
-export function Header({ mode, level, children = '' }: HeaderProps) {
+const headerColor = {
+    '1': '#a5c4f3',
+    '2': '#ebebeb',
+};
+
+export function Header({ mode, level, children }: HeaderProps) {
     const Tag = `h${level}` as keyof JSX.IntrinsicElements;
     const cleanChildren = useCleanChildren(children);
 
     return mode === 'bbcode' ? (
         <>
-            {`[size=${headerLevel[level]}][b]${level === '2' ? '[i]' : ''}`}
+            {`[size=${headerLevel[level]}][b]${level === '2' ? '[i]' : ''}${headerColor[level] ? `[color=${headerColor[level]}]` : ''}`}
             {cleanChildren}
-            {`${level === '2' ? '[/i]' : ''}[/b][/size]\n`}
+            {`${headerColor[level] ? '[/color]' : ''}${level === '2' ? '[/i]' : ''}[/b][/size]\n`}
         </>
     ) : (
         <Tag className={`header header-${level}`}>{children}</Tag>

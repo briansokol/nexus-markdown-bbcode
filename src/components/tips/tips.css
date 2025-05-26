@@ -1,0 +1,24 @@
+.tips-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    background-color: #2c2c2c;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.tips-content {
+    height: 75vh;
+    width: 75vw;
+    scroll-behavior: smooth;
+    overflow: scroll;
+
+    h1 {
+        margin-top: 0;
+    }
+}

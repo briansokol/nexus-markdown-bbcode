@@ -2,14 +2,18 @@ import '@/components/paragraph.css';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 
-export function Paragraph({ mode, children = '' }: BBCodeComponentProps) {
+interface ParagraphProps extends BBCodeComponentProps {
+    size?: 2 | 3;
+}
+
+export function Paragraph({ mode, children = '', size }: ParagraphProps) {
     const cleanChildren = useCleanChildren(children);
 
     return mode === 'bbcode' ? (
         <>
-            [size=3]{cleanChildren}[/size]{'\n'}
+            [size={size ?? 3}]{cleanChildren}[/size]{'\n'}
         </>
     ) : (
-        <p className="paragraph">{children}</p>
+        <p className={size === 2 ? 'caption' : 'paragraph'}>{children}</p>
     );
 }

@@ -3,6 +3,7 @@
     letter-spacing: 0.3px;
     margin: 0 0 1rem;
     font-family: Trebuchet, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
 }
 
 h1.header-1 {

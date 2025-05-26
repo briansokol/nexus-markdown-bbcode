@@ -5,6 +5,6 @@ interface ImageProps extends BBCodeComponentProps {
     alt?: string;
 }
 
-export const Image = ({ mode, src, alt }: ImageProps) => {
+export function Image({ mode, src, alt }: ImageProps) {
     return mode === 'bbcode' ? <>[img]{src}[/img]</> : <img src={src} alt={alt} />;
-};
+}

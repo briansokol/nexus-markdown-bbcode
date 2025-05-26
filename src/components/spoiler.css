@@ -1,0 +1,8 @@
+.spoiler {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #000;
+    opacity: 0.5;
+}

@@ -2,6 +2,7 @@ import '@/app.css';
 import { Bbcode } from '@/bbcode';
 import { Markdown } from '@/markdown';
 import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
+import { Tips } from './components/tips/tips';
 
 /**
  * localStorage key for storing markdown content
@@ -18,6 +19,8 @@ export function App() {
     const [showBBCode, setShowBBCode] = useState<boolean>(false);
     const [fileName, setFileName] = useState<string>('');
     const fileInputRef = useRef<HTMLInputElement>(null);
+    const tipsDialogRef = useRef<HTMLDialogElement>(null);
+    const [tipsShown, setTipsShown] = useState<boolean>(false);
 
     /**
      * Load markdown content from localStorage on component mount
@@ -163,8 +166,24 @@ export function App() {
         setShowBBCode(!showBBCode);
     }, [showBBCode]);
 
+    /**
+     * Handler for file selection button click - triggers the hidden file input
+     */
+    const handleToggleTips = useCallback(() => {
+        if (tipsShown) {
+            tipsDialogRef.current?.close();
+            setTipsShown(false);
+            return;
+        }
+        tipsDialogRef.current?.showModal();
+        setTipsShown(true);
+    }, [tipsShown]);
+
     return (
         <main className="app-container">
+            <dialog className="tips-dialog" ref={tipsDialogRef}>
+                {tipsShown ? <Tips closeHandler={handleToggleTips} /> : null}
+            </dialog>
             <input
                 type="file"
                 accept=".md,.markdown,.txt"
@@ -190,6 +209,9 @@ export function App() {
                 </button>
                 <button type="button" className="action-button" onClick={handleToggleView}>
                     {showBBCode ? 'Show HTML' : 'Show BBCode'}
+                </button>
+                <button type="button" className="action-button" onClick={handleToggleTips}>
+                    Show Tips
                 </button>
             </div>
             <div className="content-area">

@@ -1,7 +1,7 @@
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 
-export const UnorderedList = ({ mode, children }: BBCodeComponentProps) => {
+export function UnorderedList({ mode, children }: BBCodeComponentProps) {
     const cleanChildren = useCleanChildren(children);
 
     return mode === 'bbcode' ? (
@@ -12,4 +12,4 @@ export const UnorderedList = ({ mode, children }: BBCodeComponentProps) => {
     ) : (
         <ul>{cleanChildren}</ul>
     );
-};
+}

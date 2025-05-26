@@ -6,9 +6,10 @@ import React, { isValidElement, useMemo, type ReactNode } from 'react';
  * @param input - The string to clean
  * @returns The cleaned string
  */
-function cleanString(input: string): string {
+function cleanString(input: string, uppercase: boolean): string {
     // Replace line breaks with single space, then collapse multiple spaces into one
-    return input.replace(/[\r\n]+/g, ' ').replace(/ +/g, ' ');
+    const cleaned = input.replace(/[\r\n]+/g, ' ').replace(/ +/g, ' ');
+    return uppercase ? cleaned.toUpperCase() : cleaned;
 }
 
 /**
@@ -18,19 +19,22 @@ function cleanString(input: string): string {
  * @param input - The ReactNode to clean BBCode from
  * @returns The cleaned ReactNode
  */
-export function cleanBBCode(input: ReactNode | ReactNode[]): ReactNode | ReactNode[] {
+export function cleanBBCode(
+    input: ReactNode | ReactNode[],
+    uppercase: boolean,
+): ReactNode | ReactNode[] {
     if (input === null || input === undefined) {
         return input;
     }
 
     // If input is a string, clean it
     if (typeof input === 'string') {
-        return cleanString(input);
+        return cleanString(input, uppercase);
     }
 
     // If input is an array, clean each element
     if (Array.isArray(input)) {
-        return input.map((child: ReactNode) => cleanBBCode(child));
+        return input.map((child: ReactNode) => cleanBBCode(child, uppercase));
     }
 
     // If input is a React element, reconstruct it with cleaned children
@@ -40,7 +44,7 @@ export function cleanBBCode(input: ReactNode | ReactNode[]): ReactNode | ReactNo
             ? React.createElement(
                   input.type,
                   { ...props, key: input.key },
-                  cleanBBCode(props.children as ReactNode),
+                  cleanBBCode(props.children as ReactNode, uppercase),
               )
             : input;
     }
@@ -49,6 +53,6 @@ export function cleanBBCode(input: ReactNode | ReactNode[]): ReactNode | ReactNo
     return input;
 }
 
-export function useCleanChildren(children: ReactNode): ReactNode {
-    return useMemo(() => cleanBBCode(children), [children]);
+export function useCleanChildren(children: ReactNode, uppercase = false): ReactNode {
+    return useMemo(() => cleanBBCode(children, uppercase), [children, uppercase]);
 }

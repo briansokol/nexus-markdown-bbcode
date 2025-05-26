@@ -1,24 +1,22 @@
-import type { BBCodeComponentProps } from '@/types/components';
-
-type Colors = 'red' | 'green' | 'blue' | 'yellow';
+import { type BBCodeComponentProps, Colors } from '@/types/components';
 
 interface ColorProps extends BBCodeComponentProps {
-    color: Colors;
+    textColor: Colors;
 }
 
 const colorMap: Record<Colors, string> = {
-    red: '#e06666',
-    green: '#93c47d',
-    blue: '#6fa8dc',
-    yellow: '#ffd966',
+    [Colors.Red]: '#e06666',
+    [Colors.Green]: '#93c47d',
+    [Colors.Blue]: '#6fa8dc',
+    [Colors.Yellow]: '#ffd966',
 };
 
-export const Color = ({ mode, color, children }: ColorProps) => {
+export function Color({ mode, textColor, children }: ColorProps) {
     return mode === 'bbcode' ? (
         <>
-            [color={color}]{children}[/color]
+            [color={textColor}]{children}[/color]
         </>
     ) : (
-        <span style={{ color: colorMap[color] }}>{children}</span>
+        <span style={{ color: colorMap[textColor] }}>{children}</span>
     );
-};
+}

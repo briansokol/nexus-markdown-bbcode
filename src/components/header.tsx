@@ -19,7 +19,7 @@ const headerColor = {
 
 export function Header({ mode, level, children }: HeaderProps) {
     const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-    const cleanChildren = useCleanChildren(children);
+    const cleanChildren = useCleanChildren(children, true);
 
     return mode === 'bbcode' ? (
         <>

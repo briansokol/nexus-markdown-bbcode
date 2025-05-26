@@ -112,3 +112,9 @@
     color: #f1f1f1;
     text-align: left;
 }
+
+.tips-dialog {
+    background-color: #444;
+    color: #f1f1f1;
+    border-radius: 1rem;
+}

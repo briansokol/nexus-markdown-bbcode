@@ -1,14 +1,13 @@
+import '@/components/spoiler.css';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 
-export function ListItem({ mode, children }: BBCodeComponentProps) {
+export function Spoiler({ mode, children }: BBCodeComponentProps) {
     const cleanChildren = useCleanChildren(children);
 
     return mode === 'bbcode' ? (
-        <>
-            [*][size=3]{cleanChildren}[/size]{'\n'}
-        </>
+        <>[spoiler]{cleanChildren}[/Spoiler]</>
     ) : (
-        <li>{cleanChildren}</li>
+        <div className="spoiler">{cleanChildren}</div>
     );
 }

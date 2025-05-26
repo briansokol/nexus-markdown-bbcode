@@ -21,6 +21,7 @@ import ReactMarkdown, { type Components } from 'react-markdown';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
 import remarkGfm from 'remark-gfm';
+import { Line } from './components/line';
 
 interface MarkdownProps {
     markdownInput: string;
@@ -66,6 +67,9 @@ export function Markdown({ markdownInput, mode }: MarkdownProps) {
             },
             br({ node, ...props }) {
                 return <Break mode={mode} {...props} />;
+            },
+            hr({ node, ...props }) {
+                return <Line mode={mode} {...props} />;
             },
             ul({ node, ...props }) {
                 return <UnorderedList mode={mode} {...props} />;

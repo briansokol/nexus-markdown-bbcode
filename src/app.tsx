@@ -200,6 +200,7 @@ export function App() {
                 <div className="left-buttons">
                     <ActionButton
                         label="Load Markdown File"
+                        title="Load a markdown file from your computer"
                         Icon={FaUpload}
                         onClick={handleFileSelect}
                     />
@@ -213,17 +214,22 @@ export function App() {
                     />
                     <ActionButton
                         label="Download Markdown File"
+                        title="Download the current markdown file"
                         Icon={FaDownload}
                         onClick={handleDownload}
                     />
                     <ActionButton
                         label={showBBCode ? 'Show HTML' : 'Show BBCode'}
+                        title={
+                            showBBCode ? 'Switch to rendered HTML view' : 'Switch to BBCode view'
+                        }
                         Icon={showBBCode ? HiMiniCodeBracket : RiBracketsFill}
                         onClick={handleToggleView}
                     />
                 </div>
                 <ActionButton
                     label="Show Tips"
+                    title="Show markdown formatting tips"
                     Icon={MdOutlineTipsAndUpdates}
                     onClick={handleToggleTips}
                 />

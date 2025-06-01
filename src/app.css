@@ -108,13 +108,13 @@
     overflow: auto;
     border: 1px solid #666;
     border-radius: 4px;
-    background-color: #444;
+    background-color: rgb(41 41 46);
     color: #f1f1f1;
     text-align: left;
 }
 
 .tips-dialog {
-    background-color: #444;
+    background-color: rgb(41 41 46);
     color: #f1f1f1;
     border-radius: 1rem;
 }

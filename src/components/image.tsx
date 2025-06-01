@@ -1,3 +1,4 @@
+import '@/components/image.css';
 import type { BBCodeComponentProps } from '@/types/components';
 
 interface ImageProps extends BBCodeComponentProps {
@@ -6,5 +7,9 @@ interface ImageProps extends BBCodeComponentProps {
 }
 
 export function Image({ mode, src, alt }: ImageProps) {
-    return mode === 'bbcode' ? <>[img]{src}[/img]</> : <img src={src} alt={alt} />;
+    return mode === 'bbcode' ? (
+        <>[img]{src}[/img]</>
+    ) : (
+        <img className="inline-image" src={src} alt={alt} />
+    );
 }

@@ -193,23 +193,25 @@ export function App() {
                 aria-label="Select markdown file to load"
             />
             <div className="buttons-container">
-                <button type="button" className="action-button" onClick={handleFileSelect}>
-                    Load Markdown File
-                </button>
-                <input
-                    type="text"
-                    className="filename-input"
-                    value={fileName}
-                    onChange={handleFileNameChange}
-                    placeholder="Name your file"
-                    aria-label="Uploaded file name"
-                />
-                <button type="button" className="action-button" onClick={handleDownload}>
-                    Download Markdown
-                </button>
-                <button type="button" className="action-button" onClick={handleToggleView}>
-                    {showBBCode ? 'Show HTML' : 'Show BBCode'}
-                </button>
+                <div className="left-buttons">
+                    <button type="button" className="action-button" onClick={handleFileSelect}>
+                        Load Markdown File
+                    </button>
+                    <input
+                        type="text"
+                        className="filename-input"
+                        value={fileName}
+                        onChange={handleFileNameChange}
+                        placeholder="Name your file"
+                        aria-label="Uploaded file name"
+                    />
+                    <button type="button" className="action-button" onClick={handleDownload}>
+                        Download Markdown
+                    </button>
+                    <button type="button" className="action-button" onClick={handleToggleView}>
+                        {showBBCode ? 'Show HTML' : 'Show BBCode'}
+                    </button>
+                </div>
                 <button type="button" className="action-button" onClick={handleToggleTips}>
                     Show Tips
                 </button>

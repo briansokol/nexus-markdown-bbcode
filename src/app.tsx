@@ -1,9 +1,13 @@
 import '@/app.css';
 import { Bbcode } from '@/bbcode';
+import { Tips } from '@/components/tips/tips';
 import { Markdown } from '@/markdown';
 import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
-import { Tips } from './components/tips/tips';
-
+import { FaDownload, FaUpload } from 'react-icons/fa6';
+import { HiMiniCodeBracket } from 'react-icons/hi2';
+import { MdOutlineTipsAndUpdates } from 'react-icons/md';
+import { RiBracketsFill } from 'react-icons/ri';
+import { ActionButton } from './components/ui/action-button';
 /**
  * localStorage key for storing markdown content
  */
@@ -194,9 +198,11 @@ export function App() {
             />
             <div className="buttons-container">
                 <div className="left-buttons">
-                    <button type="button" className="action-button" onClick={handleFileSelect}>
-                        Load Markdown File
-                    </button>
+                    <ActionButton
+                        label="Load Markdown File"
+                        Icon={FaUpload}
+                        onClick={handleFileSelect}
+                    />
                     <input
                         type="text"
                         className="filename-input"
@@ -205,16 +211,22 @@ export function App() {
                         placeholder="Name your file"
                         aria-label="Uploaded file name"
                     />
-                    <button type="button" className="action-button" onClick={handleDownload}>
-                        Download Markdown
-                    </button>
-                    <button type="button" className="action-button" onClick={handleToggleView}>
-                        {showBBCode ? 'Show HTML' : 'Show BBCode'}
-                    </button>
+                    <ActionButton
+                        label="Download Markdown File"
+                        Icon={FaDownload}
+                        onClick={handleDownload}
+                    />
+                    <ActionButton
+                        label={showBBCode ? 'Show HTML' : 'Show BBCode'}
+                        Icon={showBBCode ? HiMiniCodeBracket : RiBracketsFill}
+                        onClick={handleToggleView}
+                    />
                 </div>
-                <button type="button" className="action-button" onClick={handleToggleTips}>
-                    Show Tips
-                </button>
+                <ActionButton
+                    label="Show Tips"
+                    Icon={MdOutlineTipsAndUpdates}
+                    onClick={handleToggleTips}
+                />
             </div>
             <div className="content-area">
                 <div className="editor-container">

@@ -1,4 +1,4 @@
-import '@/components/image.css';
+import '@/components/markdown/image.css';
 import type { BBCodeComponentProps } from '@/types/components';
 
 interface ImageProps extends BBCodeComponentProps {

@@ -1,4 +1,4 @@
-import '@/components/anchor.css';
+import '@/components/markdown/anchor.css';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 

@@ -1,4 +1,4 @@
-import '@/components/header.css';
+import '@/components/markdown/header.css';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 import type { JSX } from 'react';
@@ -14,7 +14,7 @@ const headerLevel = {
 
 const headerColor = {
     '1': '#a5c4f3',
-    '2': '#ebebeb',
+    '2': '#a5c4f3',
 };
 
 export function Header({ mode, level, children }: HeaderProps) {

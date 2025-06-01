@@ -5,14 +5,20 @@ interface TipsProps {
     closeHandler: () => void;
 }
 
+/**
+ * Tips component that displays markdown formatting help with a fixed header and scrollable content
+ * @param closeHandler - Function to call when the close button is clicked
+ */
 export function Tips({ closeHandler }: TipsProps) {
     return (
-        <>
-            <button type="button" className="tips-close" onClick={closeHandler}>
-                &times;
-            </button>
-            <div className="tips-content">
+        <div className="tips-container">
+            <div className="tips-header">
                 <h1>Tips</h1>
+                <button type="button" className="tips-close" onClick={closeHandler}>
+                    &times;
+                </button>
+            </div>
+            <div className="tips-content">
                 <p>
                     This tools supports CommonMark, Github-Flavored Markdown, and some custom
                     directives.
@@ -72,6 +78,15 @@ export function Tips({ closeHandler }: TipsProps) {
                 </p>
                 <MdExample>:center[Centered text]</MdExample>
                 <MdExample>:right[Right-aligned text]</MdExample>
+                <p>
+                    Multiple lines can be centered in a group. This can also include images and
+                    other markdown tags.
+                </p>
+                <MdExample>
+                    :::center{'\n'}![Official Addon](https://i.imgur.com/1FSEwwP.png){'\n\n'}
+                    :small[Official Addon Banner]
+                    {'\n'}:::
+                </MdExample>
 
                 <h2>Lists</h2>
                 <p>
@@ -92,9 +107,10 @@ export function Tips({ closeHandler }: TipsProps) {
                 <h3>Images</h3>
                 <p>
                     Images are defined using an exclamation mark followed by square brackets for the
-                    alt text and parentheses for the URL.
+                    alt text and parentheses for the URL. BBCode doesn't use the alt text, but it is
+                    still useful for remembering which images are which when reading the markdown.
                 </p>
-                <MdExample>![Alt Text](https://example.com/image.jpg)</MdExample>
+                <MdExample>![Official Addon](https://i.imgur.com/1FSEwwP.png)</MdExample>
 
                 <h3>YouTube Embeds</h3>
                 <p>
@@ -106,7 +122,8 @@ export function Tips({ closeHandler }: TipsProps) {
                 <h2>Spoilers</h2>
                 <p>
                     Spoilers are defined using a custom directive. Content within the spoiler must
-                    be wrapped in triple-colons.
+                    be wrapped in triple-colons. Spoilers will not be collapsable in the HTML
+                    preview.
                 </p>
                 <MdExample>
                     :::spoiler{'\n'}This is a spoiler.{'\n\n'}Anything can go inside a spoiler.
@@ -132,6 +149,6 @@ export function Tips({ closeHandler }: TipsProps) {
                     {`\`\`\``}
                 </MdExample>
             </div>
-        </>
+        </div>
     );
 }

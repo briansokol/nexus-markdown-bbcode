@@ -1,4 +1,4 @@
-import '@/components/paragraph.css';
+import '@/components/markdown/paragraph.css';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 

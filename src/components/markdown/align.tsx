@@ -1,4 +1,4 @@
-import '@/components/align.css';
+import '@/components/markdown/align.css';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 

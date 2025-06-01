@@ -1,4 +1,4 @@
-import '@/components/strong.css';
+import '@/components/markdown/strong.css';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 

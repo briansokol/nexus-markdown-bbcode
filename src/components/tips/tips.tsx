@@ -113,6 +113,24 @@ export function Tips({ closeHandler }: TipsProps) {
                     {'\n'}
                     :::
                 </MdExample>
+
+                <h2>Code</h2>
+                <p>
+                    Code blocks can be created using multiple methods. They all create the same
+                    BBCode.
+                </p>
+
+                <h3>Single Line Code Block</h3>
+                <p>Surround your code with single back-ticks.</p>
+                <MdExample>`This is a single line code block`</MdExample>
+
+                <h3>Multi-Line Code Block</h3>
+                <p>Add triple back-ticks on the lines before and after the code block.</p>
+                <MdExample>
+                    {`\`\`\``}
+                    This is a multi-line code block{'\n'}This is a multi-line code block
+                    {`\`\`\``}
+                </MdExample>
             </div>
         </>
     );

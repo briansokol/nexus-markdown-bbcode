@@ -2,13 +2,16 @@
 import { Align } from '@/components/align';
 import { Anchor } from '@/components/anchor';
 import { Break } from '@/components/break';
+import { Code } from '@/components/code';
 import { Color } from '@/components/color';
 import { Emphasized } from '@/components/emphasized';
 import { Header } from '@/components/header';
 import { Image } from '@/components/image';
+import { Line } from '@/components/line';
 import { ListItem } from '@/components/list-item';
 import { OrderedList } from '@/components/ordered-list';
 import { Paragraph } from '@/components/paragraph';
+import { Pre } from '@/components/pre';
 import { Spoiler } from '@/components/spoiler';
 import { Strikethrough } from '@/components/strikethrough';
 import { Strong } from '@/components/strong';
@@ -21,7 +24,6 @@ import ReactMarkdown, { type Components } from 'react-markdown';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
 import remarkGfm from 'remark-gfm';
-import { Line } from './components/line';
 
 interface MarkdownProps {
     markdownInput: string;
@@ -121,6 +123,12 @@ export function Markdown({ markdownInput, mode }: MarkdownProps) {
             },
             small({ node, ...props }) {
                 return <Paragraph size={2} mode={mode} {...props} />;
+            },
+            code({ node, ...props }) {
+                return <Code mode={mode} {...props} />;
+            },
+            pre({ node, ...props }) {
+                return <Pre mode={mode} {...props} />;
             },
         }),
         [mode],

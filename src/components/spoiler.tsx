@@ -6,7 +6,7 @@ export function Spoiler({ mode, children }: BBCodeComponentProps) {
     const cleanChildren = useCleanChildren(children);
 
     return mode === 'bbcode' ? (
-        <>[spoiler]{cleanChildren}[/Spoiler]</>
+        <>[spoiler]{cleanChildren}[/spoiler]</>
     ) : (
         <div className="spoiler">{cleanChildren}</div>
     );

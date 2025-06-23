@@ -11,7 +11,7 @@ export function Align({ mode, alignment, children }: AlignProps) {
 
     return mode === 'bbcode' ? (
         <>
-            [align={alignment}]{cleanChildren}[/align]
+            [{alignment}]{cleanChildren}[/{alignment}]
         </>
     ) : (
         <div className={`align-${alignment}`}>{children}</div>

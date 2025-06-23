@@ -247,7 +247,7 @@ export function App() {
                     {showBBCode ? (
                         <Bbcode markdownInput={markdownInput} />
                     ) : (
-                        <div className="html-preview">
+                        <div className="html-preview" data-testid="html-preview">
                             <Markdown mode={'html'} markdownInput={markdownInput} />
                         </div>
                     )}

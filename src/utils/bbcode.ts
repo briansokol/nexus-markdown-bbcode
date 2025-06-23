@@ -4,9 +4,10 @@ import React, { isValidElement, useMemo, type ReactNode } from 'react';
  * Cleans a string by replacing line breaks with spaces and normalizing multiple spaces
  *
  * @param input - The string to clean
+ * @param uppercase - Whether to convert the string to uppercase
  * @returns The cleaned string
  */
-function cleanString(input: string, uppercase: boolean): string {
+export function cleanString(input: string, uppercase: boolean): string {
     // Replace line breaks with single space, then collapse multiple spaces into one
     const cleaned = input.replace(/[\r\n]+/g, ' ').replace(/ +/g, ' ');
     return uppercase ? cleaned.toUpperCase() : cleaned;

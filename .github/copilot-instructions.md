@@ -134,6 +134,80 @@ export function ComponentName({ mode, children }: ComponentProps) {
 - Verify accessibility and user interactions
 - Test file operations and edge cases
 
+## Testing Setup and Conventions
+
+### Testing Tools
+
+- **Vitest** is used as the test runner and assertion library.
+- **@testing-library/react** and **@testing-library/user-event** are used for React component testing and user interaction simulation.
+- **jsdom** is used as the test environment for DOM APIs.
+
+### Test File Structure
+
+- All test files must be placed in a `__tests__` folder located in the same directory as the file being tested.
+- Test files should use the `.test.ts` or `.test.tsx` extension, matching the file type they test.
+- Example: To test `src/utils/bbcode.ts`, place the test in `src/utils/__tests__/bbcode.test.ts`.
+
+### Running Tests
+
+- Use the following npm scripts:
+    - `npm test` or `npm run test` — Run all tests in watch mode.
+    - `npm run test:ui` — Run tests with the Vitest UI.
+    - `npm run test:run` — Run all tests once (CI mode).
+    - `npm run test:coverage` — Run tests and generate a coverage report.
+
+### Testing Best Practices
+
+- Focus on component behavior, not implementation details.
+- Test both HTML and BBCode rendering modes for all dual-mode components.
+- Use `@testing-library/react` for rendering and querying components.
+- Use `@testing-library/user-event` for simulating user interactions.
+- Use `renderHook` from `@testing-library/react` for testing custom hooks.
+- Always clean up after tests and avoid global side effects.
+- Prefer colocating test files with the code they test for maintainability.
+
+### Example Test File Structure
+
+```
+src/utils/bbcode.ts
+src/utils/__tests__/bbcode.test.ts
+src/components/ui/action-button.tsx
+src/components/ui/__tests__/action-button.test.tsx
+```
+
+### Example Test (for a utility function)
+
+```typescript
+import { describe, it, expect } from 'vitest';
+import { cleanBBCode } from '../bbcode';
+
+describe('cleanBBCode', () => {
+    it('should clean simple strings', () => {
+        expect(cleanBBCode('  hello   world  ', false)).toBe(' hello world ');
+    });
+});
+```
+
+### Example Test (for a React component)
+
+```typescript
+import { describe, it, expect } from 'vitest';
+import { render, screen } from '@/test/test-utils';
+import { ActionButton } from '../action-button';
+
+describe('ActionButton', () => {
+  it('renders with correct label', () => {
+    render(<ActionButton label="Copy" title="Copy" Icon={SomeIcon} onClick={() => {}} />);
+    expect(screen.getByText('Copy')).toBeInTheDocument();
+  });
+});
+```
+
+### Coverage
+
+- Coverage reports are generated in the `coverage/` directory when running `npm run test:coverage`.
+- Ensure new code is covered by tests and aim for high coverage, especially for core logic and rendering modes.
+
 ## Build Configuration
 
 ### Vite Setup

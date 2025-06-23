@@ -14,7 +14,7 @@ const colorMap: Record<Colors, string> = {
 export function Color({ mode, textColor, children }: ColorProps) {
     return mode === 'bbcode' ? (
         <>
-            [color={textColor}]{children}[/color]
+            [color={colorMap[textColor]}]{children}[/color]
         </>
     ) : (
         <span style={{ color: colorMap[textColor] }}>{children}</span>

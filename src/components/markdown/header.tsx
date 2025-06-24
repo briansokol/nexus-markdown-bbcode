@@ -1,4 +1,4 @@
-import '@/components/markdown/header.css';
+import * as styles from '@/components/markdown/header.styles';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 import type { JSX } from 'react';
@@ -28,6 +28,6 @@ export function Header({ mode, level, children }: HeaderProps) {
             {`${headerColor[level] ? '[/color]' : ''}${level === '2' ? '[/i]' : ''}[/b][/size]\n`}
         </>
     ) : (
-        <Tag className={`header header-${level}`}>{children}</Tag>
+        <Tag css={level === '1' ? styles.header1 : styles.header2}>{children}</Tag>
     );
 }

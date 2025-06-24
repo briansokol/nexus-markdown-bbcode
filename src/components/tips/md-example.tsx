@@ -1,4 +1,5 @@
-import '@/components/tips/md-example.css';
+/** @jsxImportSource @emotion/react */
+import * as styles from '@/components/tips/md-example.styles';
 import { Markdown } from '@/markdown';
 
 interface MdExampleProps {
@@ -23,20 +24,20 @@ function addLineBreaks(children: string | string[]): string {
 export function MdExample({ children }: MdExampleProps) {
     console.log(addLineBreaks(children));
     return (
-        <div className="md-example">
-            <h4 className="md-example-header">Example:</h4>
+        <div css={styles.mdExample}>
+            <h4 css={styles.mdExampleHeader}>Example:</h4>
             <div>
-                <h5 className="md-example-title">Example Markdown Input</h5>
-                <pre className="md-example-input">{addLineBreaks(children)}</pre>
+                <h5 css={styles.mdExampleTitle}>Example Markdown Input</h5>
+                <pre css={styles.mdExampleInput}>{addLineBreaks(children)}</pre>
             </div>
             <div>
-                <h5 className="md-example-title">BBCode Output</h5>
-                <pre className="md-example-output">
+                <h5 css={styles.mdExampleTitle}>BBCode Output</h5>
+                <pre css={styles.mdExampleOutput}>
                     <Markdown markdownInput={addLineBreaks(children)} mode="bbcode" />
                 </pre>
             </div>
             <div>
-                <h5 className="md-example-title">HTML Output</h5>
+                <h5 css={styles.mdExampleTitle}>HTML Output</h5>
                 <Markdown markdownInput={addLineBreaks(children)} mode="html" />
             </div>
         </div>

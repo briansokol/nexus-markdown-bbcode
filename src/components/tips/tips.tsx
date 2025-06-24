@@ -1,4 +1,4 @@
-import '@/components/tips/tips.css';
+import * as styles from '@/components/tips/tips.styles';
 import { MdExample } from './md-example';
 
 interface TipsProps {
@@ -11,14 +11,14 @@ interface TipsProps {
  */
 export function Tips({ closeHandler }: TipsProps) {
     return (
-        <div className="tips-container">
-            <div className="tips-header">
+        <div css={styles.tipsContainer}>
+            <div css={styles.tipsHeader}>
                 <h1>Tips</h1>
-                <button type="button" className="tips-close" onClick={closeHandler}>
+                <button type="button" css={styles.tipsClose} onClick={closeHandler}>
                     &times;
                 </button>
             </div>
-            <div className="tips-content">
+            <div css={styles.tipsContent}>
                 <p>
                     This tools supports CommonMark, Github-Flavored Markdown, and some custom
                     directives.

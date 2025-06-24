@@ -4,6 +4,7 @@
     "github.copilot",
     "github.copilot-chat",
     "esbenp.prettier-vscode",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "styled-components.vscode-styled-components"
   ]
 }

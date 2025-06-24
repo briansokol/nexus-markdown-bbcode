@@ -16,7 +16,7 @@ describe('Header', () => {
         const headerElement = screen.getByText('Header text');
         expect(headerElement).toBeInTheDocument();
         expect(headerElement.tagName).toBe('H1');
-        expect(headerElement).toHaveClass('header', 'header-1');
+        expect(headerElement.tagName).toBe('H1');
     });
 
     /**
@@ -32,7 +32,7 @@ describe('Header', () => {
         const headerElement = screen.getByText('Header text');
         expect(headerElement).toBeInTheDocument();
         expect(headerElement.tagName).toBe('H2');
-        expect(headerElement).toHaveClass('header', 'header-2');
+        expect(headerElement.tagName).toBe('H2');
     });
 
     /**
@@ -83,7 +83,7 @@ describe('Header', () => {
 
         const headerElement = container.querySelector('h1');
         expect(headerElement).toBeInTheDocument();
-        expect(headerElement).toHaveClass('header', 'header-1');
+        expect(headerElement?.tagName).toBe('H1');
     });
 
     /**
@@ -114,7 +114,7 @@ describe('Header', () => {
 
         const headerElement = screen.getByText('content').closest('h1');
         expect(headerElement).toBeInTheDocument();
-        expect(headerElement).toHaveClass('header', 'header-1');
+        expect(headerElement?.tagName).toBe('H1');
         expect(screen.getByText('Nested')).toBeInTheDocument();
     });
 

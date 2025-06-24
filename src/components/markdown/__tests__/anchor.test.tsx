@@ -17,7 +17,7 @@ describe('Anchor', () => {
         expect(anchorElement).toBeInTheDocument();
         expect(anchorElement.tagName).toBe('A');
         expect(anchorElement).toHaveAttribute('href', 'https://example.com');
-        expect(anchorElement).toHaveClass('anchor');
+        expect(anchorElement.tagName).toBe('A');
     });
 
     /**
@@ -43,7 +43,7 @@ describe('Anchor', () => {
         expect(anchorElement).toBeInTheDocument();
         expect(anchorElement.tagName).toBe('A');
         expect(anchorElement).not.toHaveAttribute('href');
-        expect(anchorElement).toHaveClass('anchor');
+        expect(anchorElement.tagName).toBe('A');
     });
 
     /**
@@ -64,7 +64,7 @@ describe('Anchor', () => {
         const anchorElement = container.querySelector('a');
         expect(anchorElement).toBeInTheDocument();
         expect(anchorElement).toHaveAttribute('href', 'https://example.com');
-        expect(anchorElement).toHaveClass('anchor');
+        expect(anchorElement?.tagName).toBe('A');
         expect(anchorElement).toBeEmptyDOMElement();
     });
 
@@ -81,7 +81,7 @@ describe('Anchor', () => {
         const anchorElement = screen.getByText('link text').closest('a');
         expect(anchorElement).toBeInTheDocument();
         expect(anchorElement).toHaveAttribute('href', 'https://example.com');
-        expect(anchorElement).toHaveClass('anchor');
+        expect(anchorElement?.tagName).toBe('A');
         expect(screen.getByText('Bold')).toBeInTheDocument();
     });
 

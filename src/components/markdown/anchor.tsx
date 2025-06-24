@@ -1,4 +1,5 @@
-import '@/components/markdown/anchor.css';
+/** @jsxImportSource @emotion/react */
+import * as styles from '@/components/markdown/anchor.styles';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 
@@ -14,7 +15,7 @@ export function Anchor({ mode, href, children }: AnchorProps) {
             [url={href}]{cleanChildren}[/url]
         </>
     ) : (
-        <a href={href} className="anchor">
+        <a href={href} css={styles.anchor}>
             {children}
         </a>
     );

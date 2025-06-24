@@ -1,4 +1,4 @@
-import '@/components/markdown/code.css';
+import * as styles from '@/components/markdown/code.styles';
 import type { BBCodeComponentProps } from '@/types/components';
 export function Code({ mode, children }: BBCodeComponentProps) {
     return mode === 'bbcode' ? (
@@ -6,6 +6,6 @@ export function Code({ mode, children }: BBCodeComponentProps) {
             [code]{children}[/code]{'\n'}
         </>
     ) : (
-        <code className="code-block">{children}</code>
+        <code css={styles.codeBlock}>{children}</code>
     );
 }

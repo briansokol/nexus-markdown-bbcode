@@ -1,4 +1,4 @@
-import '@/components/markdown/spoiler.css';
+import * as styles from '@/components/markdown/spoiler.styles';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 
@@ -8,6 +8,6 @@ export function Spoiler({ mode, children }: BBCodeComponentProps) {
     return mode === 'bbcode' ? (
         <>[spoiler]{cleanChildren}[/spoiler]</>
     ) : (
-        <div className="spoiler">{cleanChildren}</div>
+        <div css={styles.spoiler}>{cleanChildren}</div>
     );
 }

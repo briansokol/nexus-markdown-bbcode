@@ -1,3 +1,4 @@
+import * as styles from '@/app.styles';
 import { Markdown } from '@/markdown';
 import { useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
@@ -26,7 +27,7 @@ export function Bbcode({ markdownInput }: BbcodeProps) {
 
     return (
         <textarea
-            className="markdown-input"
+            css={styles.markdownInput}
             value={bbcode}
             readOnly
             placeholder="Write some Markdown to see the BBCode..."

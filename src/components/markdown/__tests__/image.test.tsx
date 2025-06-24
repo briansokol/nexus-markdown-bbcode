@@ -14,7 +14,7 @@ describe('Image', () => {
         expect(imgElement.tagName).toBe('IMG');
         expect(imgElement).toHaveAttribute('src', 'https://example.com/image.jpg');
         expect(imgElement).toHaveAttribute('alt', 'Test image');
-        expect(imgElement).toHaveClass('inline-image');
+        expect(imgElement.tagName).toBe('IMG');
     });
 
     /**
@@ -81,6 +81,6 @@ describe('Image', () => {
         // React doesn't render empty string attributes, so they won't be present
         expect(imgElement).not.toHaveAttribute('src');
         expect(imgElement).toHaveAttribute('alt', '');
-        expect(imgElement).toHaveClass('inline-image');
+        expect(imgElement.tagName).toBe('IMG');
     });
 });

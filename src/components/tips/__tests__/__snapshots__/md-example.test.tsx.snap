@@ -3,33 +3,33 @@
 exports[`MdExample > should render with YouTube directive 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         :youtube{v=tKWPfMLw3r8}
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -44,12 +44,12 @@ exports[`MdExample > should render with YouTube directive 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         <iframe
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -68,33 +68,33 @@ exports[`MdExample > should render with YouTube directive 1`] = `
 exports[`MdExample > should render with alignment directive 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         :center[Centered text]
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -113,15 +113,15 @@ exports[`MdExample > should render with alignment directive 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         <div
-          class="align-center"
+          class="css-qjem27"
         >
           Centered text
         </div>
@@ -134,21 +134,21 @@ exports[`MdExample > should render with alignment directive 1`] = `
 exports[`MdExample > should render with array of strings 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         Line 1
 Line 2
@@ -157,12 +157,12 @@ Line 3
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -175,12 +175,12 @@ Line 3
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         Line 1
 Line 2
@@ -194,33 +194,33 @@ Line 3
 exports[`MdExample > should render with caption directive 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         :small[This is a caption]
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -239,15 +239,15 @@ exports[`MdExample > should render with caption directive 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         <p
-          class="caption"
+          class="css-1vfwp7t"
         >
           This is a caption
         </p>
@@ -260,21 +260,21 @@ exports[`MdExample > should render with caption directive 1`] = `
 exports[`MdExample > should render with code block 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         \`\`\`
 This is a multi-line code block
@@ -284,12 +284,12 @@ This is a multi-line code block
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [code]
         This is a multi-line code block
@@ -302,7 +302,7 @@ This is a multi-line code block
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
@@ -310,7 +310,7 @@ This is a multi-line code block
         class="pre-block"
       >
         <code
-          class="code-block"
+          class="css-xgh56q"
         >
           This is a multi-line code block
 This is a multi-line code block
@@ -325,33 +325,33 @@ This is a multi-line code block
 exports[`MdExample > should render with color directive 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         This is :red[red text]
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -369,12 +369,12 @@ exports[`MdExample > should render with color directive 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         This is 
         <span
@@ -391,21 +391,21 @@ exports[`MdExample > should render with color directive 1`] = `
 exports[`MdExample > should render with complex nested alignment 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         :::center
 ![Official Addon](https://i.imgur.com/1FSEwwP.png)
@@ -416,12 +416,12 @@ exports[`MdExample > should render with complex nested alignment 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [
         center
@@ -455,27 +455,27 @@ exports[`MdExample > should render with complex nested alignment 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <div
-        class="align-center"
+        class="css-qjem27"
       >
         <p
-          class="paragraph"
+          class="css-1bqejpo"
         >
           <img
             alt="Official Addon"
-            class="inline-image"
+            class="css-v5z1y7"
             src="https://i.imgur.com/1FSEwwP.png"
           />
         </p>
         <p
-          class="paragraph"
+          class="css-1bqejpo"
         >
           <p
-            class="caption"
+            class="css-1vfwp7t"
           >
             Official Addon Banner
           </p>
@@ -489,38 +489,38 @@ exports[`MdExample > should render with complex nested alignment 1`] = `
 exports[`MdExample > should render with empty content 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
          
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       />
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
@@ -532,33 +532,33 @@ exports[`MdExample > should render with empty content 1`] = `
 exports[`MdExample > should render with header markdown 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         # Header Level 1
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=5][b][color=#a5c4f3]
         HEADER LEVEL 1
@@ -568,12 +568,12 @@ exports[`MdExample > should render with header markdown 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <h1
-        class="header header-1"
+        class="css-yrxof4"
       >
         Header Level 1
       </h1>
@@ -585,33 +585,33 @@ exports[`MdExample > should render with header markdown 1`] = `
 exports[`MdExample > should render with image markdown 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         ![Official Addon](https://i.imgur.com/1FSEwwP.png)
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -626,16 +626,16 @@ exports[`MdExample > should render with image markdown 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         <img
           alt="Official Addon"
-          class="inline-image"
+          class="css-v5z1y7"
           src="https://i.imgur.com/1FSEwwP.png"
         />
       </p>
@@ -647,33 +647,33 @@ exports[`MdExample > should render with image markdown 1`] = `
 exports[`MdExample > should render with inline code 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         \`This is inline code\`
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -690,15 +690,15 @@ exports[`MdExample > should render with inline code 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         <code
-          class="code-block"
+          class="css-xgh56q"
         >
           This is inline code
         </code>
@@ -711,33 +711,33 @@ exports[`MdExample > should render with inline code 1`] = `
 exports[`MdExample > should render with link 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         [Link Text](https://example.com)
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -754,15 +754,15 @@ exports[`MdExample > should render with link 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         <a
-          class="anchor"
+          class="css-1pd9vk1"
           href="https://example.com"
         >
           Link Text
@@ -776,21 +776,21 @@ exports[`MdExample > should render with link 1`] = `
 exports[`MdExample > should render with mixed array content including newlines 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         Line 1
 Line 2
@@ -799,12 +799,12 @@ Line 3
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -817,12 +817,12 @@ Line 3
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         Line 1
 Line 2
@@ -836,21 +836,21 @@ Line 3
 exports[`MdExample > should render with multiple paragraphs 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         This is a paragraph.
 
@@ -859,12 +859,12 @@ This is another paragraph.
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -886,19 +886,19 @@ This is another paragraph.
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         This is a paragraph.
       </p>
       
 
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         This is another paragraph.
       </p>
@@ -910,33 +910,33 @@ This is another paragraph.
 exports[`MdExample > should render with ordered list 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         1. Item 1
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [list=1]
         
@@ -953,7 +953,7 @@ exports[`MdExample > should render with ordered list 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
@@ -972,33 +972,33 @@ exports[`MdExample > should render with ordered list 1`] = `
 exports[`MdExample > should render with simple string content 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         This is **bold** text
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -1015,15 +1015,17 @@ exports[`MdExample > should render with simple string content 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         This is 
-        <strong>
+        <strong
+          class="css-1vg6q84"
+        >
           bold
         </strong>
          text
@@ -1036,21 +1038,21 @@ exports[`MdExample > should render with simple string content 1`] = `
 exports[`MdExample > should render with spoiler directive 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         :::spoiler
 This is a spoiler.
@@ -1061,12 +1063,12 @@ Anything can go inside a spoiler.
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [spoiler]
         [size=
@@ -1088,20 +1090,20 @@ Anything can go inside a spoiler.
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <div
-        class="spoiler"
+        class="css-3gyvk1"
       >
         <p
-          class="paragraph"
+          class="css-1bqejpo"
         >
           This is a spoiler.
         </p>
         <p
-          class="paragraph"
+          class="css-1bqejpo"
         >
           Anything can go inside a spoiler.
         </p>
@@ -1114,33 +1116,33 @@ Anything can go inside a spoiler.
 exports[`MdExample > should render with underline directive 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         This is :ins[underline] text
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -1157,12 +1159,12 @@ exports[`MdExample > should render with underline directive 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         This is 
         <ins>
@@ -1178,33 +1180,33 @@ exports[`MdExample > should render with underline directive 1`] = `
 exports[`MdExample > should render with unordered list 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         - Item 1
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [list]
         
@@ -1221,7 +1223,7 @@ exports[`MdExample > should render with unordered list 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
@@ -1240,33 +1242,33 @@ exports[`MdExample > should render with unordered list 1`] = `
 exports[`MdExample > should render with various formatting styles 1`] = `
 <div>
   <div
-    class="md-example"
+    class="css-h572dx"
   >
     <h4
-      class="md-example-header"
+      class="css-1j4b27w"
     >
       Example:
     </h4>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         Example Markdown Input
       </h5>
       <pre
-        class="md-example-input"
+        class="css-q6c39y"
       >
         This is *italic* and ~~strikethrough~~ text
       </pre>
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         BBCode Output
       </h5>
       <pre
-        class="md-example-output"
+        class="css-q6c39y"
       >
         [size=
         3
@@ -1287,12 +1289,12 @@ exports[`MdExample > should render with various formatting styles 1`] = `
     </div>
     <div>
       <h5
-        class="md-example-title"
+        class="css-17t88eq"
       >
         HTML Output
       </h5>
       <p
-        class="paragraph"
+        class="css-1bqejpo"
       >
         This is 
         <em>

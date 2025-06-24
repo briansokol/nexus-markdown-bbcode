@@ -1,19 +1,23 @@
-#root {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
+import { css } from '@emotion/react';
 
-.app-container {
+export const globalStyles = css`
+    #root {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+`;
+
+export const appContainer = css`
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
+`;
 
-.buttons-container {
+export const buttonsContainer = css`
     padding: 1rem;
     background-color: #2c2c2c;
     border-bottom: 1px solid #444;
@@ -21,19 +25,19 @@
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-}
+`;
 
-.left-buttons {
+export const leftButtons = css`
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
+`;
 
-.hidden-file-input {
+export const hiddenFileInput = css`
     display: none;
-}
+`;
 
-.filename-input {
+export const filenameInput = css`
     padding: 0.5rem;
     background-color: #3a3a3a;
     color: white;
@@ -42,42 +46,42 @@
     font-size: 14px;
     min-width: 200px;
     transition: border-color 0.2s;
-}
 
-.filename-input:focus {
-    outline: none;
-    border-color: #007acc;
-    background-color: #2a2a2a;
-}
+    &:focus {
+        outline: none;
+        border-color: #007acc;
+        background-color: #2a2a2a;
+    }
 
-.filename-input::placeholder {
-    color: #999;
-}
+    &::placeholder {
+        color: #999;
+    }
+`;
 
-.content-area {
+export const contentArea = css`
     display: flex;
     flex: 1;
     width: 100%;
     overflow: hidden;
-}
+`;
 
-.editor-container,
-.preview-container {
+export const editorContainer = css`
     width: 50%;
     height: 100%;
     padding: 1rem;
     box-sizing: border-box;
-}
-
-.editor-container {
     padding-right: 0.5rem;
-}
+`;
 
-.preview-container {
+export const previewContainer = css`
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
     padding-left: 0.5rem;
-}
+`;
 
-.markdown-input {
+export const markdownInput = css`
     width: 100%;
     height: 100%;
     padding: 1rem;
@@ -90,9 +94,9 @@
     border-radius: 4px;
     background-color: #1e1e1e;
     color: #e0e0e0;
-}
+`;
 
-.html-preview {
+export const htmlPreview = css`
     width: 100%;
     height: 100%;
     padding: 1rem;
@@ -103,17 +107,17 @@
     background-color: rgb(41 41 46);
     color: #f1f1f1;
     text-align: left;
-}
+`;
 
-.tips-dialog {
+export const tipsDialog = css`
     background-color: rgb(41 41 46);
     color: #f1f1f1;
     border-radius: 1rem;
     border: 1px solid #555;
     box-shadow: 0 10px 25px rgb(0 0 0 / 50%);
-}
 
-.tips-dialog::backdrop {
-    background-color: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(10px);
-}
+    &::backdrop {
+        background-color: rgb(0 0 0 / 50%);
+        backdrop-filter: blur(10px);
+    }
+`;

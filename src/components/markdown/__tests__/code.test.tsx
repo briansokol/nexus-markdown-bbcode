@@ -12,7 +12,7 @@ describe('Code', () => {
         const codeElement = screen.getByText("console.log('hello');");
         expect(codeElement).toBeInTheDocument();
         expect(codeElement.tagName).toBe('CODE');
-        expect(codeElement).toHaveClass('code-block');
+        expect(codeElement.tagName).toBe('CODE');
     });
 
     /**
@@ -35,7 +35,7 @@ describe('Code', () => {
 
         const codeElement = container.querySelector('code');
         expect(codeElement).toBeInTheDocument();
-        expect(codeElement).toHaveClass('code-block');
+        expect(codeElement?.tagName).toBe('CODE');
         expect(codeElement).toBeEmptyDOMElement();
     });
 
@@ -49,7 +49,7 @@ describe('Code', () => {
         const codeElement = screen.getByText(/function test\(\)/);
         expect(codeElement).toBeInTheDocument();
         expect(codeElement.tagName).toBe('CODE');
-        expect(codeElement).toHaveClass('code-block');
+        expect(codeElement.tagName).toBe('CODE');
         expect(codeElement.textContent).toContain('function test()');
         expect(codeElement.textContent).toContain('return true;');
     });
@@ -106,7 +106,7 @@ describe('Code', () => {
 
         const codeElement = screen.getByText('x = 1;').closest('code');
         expect(codeElement).toBeInTheDocument();
-        expect(codeElement).toHaveClass('code-block');
+        expect(codeElement?.tagName).toBe('CODE');
         expect(screen.getByText('const')).toBeInTheDocument();
     });
 });

@@ -47,8 +47,8 @@ describe('App', () => {
         render(<App />);
 
         // Check for editor and preview containers
-        expect(document.querySelector('.editor-container')).toBeInTheDocument();
-        expect(document.querySelector('.preview-container')).toBeInTheDocument();
+        expect(document.querySelector('[data-testid="editor-container"]')).toBeInTheDocument();
+        expect(document.querySelector('[data-testid="preview-container"]')).toBeInTheDocument();
         expect(screen.getByTestId('html-preview')).toBeInTheDocument();
 
         // Check for action buttons

@@ -7,7 +7,10 @@ import packageJson from './package.json';
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [
-        react(),
+        react({
+            jsxImportSource: '@emotion/react',
+            plugins: [['@swc/plugin-emotion', {}]],
+        }),
         viteSingleFile({ removeViteModuleLoader: true }),
         {
             name: 'rename',

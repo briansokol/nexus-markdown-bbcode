@@ -1,4 +1,6 @@
-.md-example {
+import { css } from '@emotion/react';
+
+export const mdExample = css`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -11,21 +13,25 @@
     > div {
         margin-left: 1.5rem;
     }
-}
+`;
 
-.md-example-header {
+export const mdExampleHeader = css`
     margin-top: 0.5rem;
     margin-bottom: 0.25rem;
-}
+`;
 
-.md-example-title {
+export const mdExampleTitle = css`
     margin: 0.5rem 0 0;
     font-size: 1rem;
     font-weight: bold;
-}
+`;
 
-.md-example-input,
-.md-example-output {
+export const mdExampleInput = css`
     margin: 0;
     font-size: 1rem;
-}
+`;
+
+export const mdExampleOutput = css`
+    margin: 0;
+    font-size: 1rem;
+`;

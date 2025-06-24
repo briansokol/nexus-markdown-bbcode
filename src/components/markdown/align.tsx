@@ -1,4 +1,4 @@
-import '@/components/markdown/align.css';
+import * as styles from '@/components/markdown/align.styles';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 
@@ -14,6 +14,6 @@ export function Align({ mode, alignment, children }: AlignProps) {
             [{alignment}]{cleanChildren}[/{alignment}]
         </>
     ) : (
-        <div className={`align-${alignment}`}>{children}</div>
+        <div css={alignment === 'center' ? styles.alignCenter : styles.alignRight}>{children}</div>
     );
 }

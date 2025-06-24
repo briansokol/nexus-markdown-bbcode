@@ -12,7 +12,7 @@ describe('Paragraph', () => {
         const paragraphElement = screen.getByText('Paragraph text');
         expect(paragraphElement).toBeInTheDocument();
         expect(paragraphElement.tagName).toBe('P');
-        expect(paragraphElement).toHaveClass('paragraph');
+        expect(paragraphElement.tagName).toBe('P');
     });
 
     /**
@@ -28,7 +28,7 @@ describe('Paragraph', () => {
         const paragraphElement = screen.getByText('Caption text');
         expect(paragraphElement).toBeInTheDocument();
         expect(paragraphElement.tagName).toBe('P');
-        expect(paragraphElement).toHaveClass('caption');
+        expect(paragraphElement.tagName).toBe('P');
     });
 
     /**
@@ -44,7 +44,7 @@ describe('Paragraph', () => {
         const paragraphElement = screen.getByText('Paragraph text');
         expect(paragraphElement).toBeInTheDocument();
         expect(paragraphElement.tagName).toBe('P');
-        expect(paragraphElement).toHaveClass('paragraph');
+        expect(paragraphElement.tagName).toBe('P');
     });
 
     /**
@@ -99,7 +99,7 @@ describe('Paragraph', () => {
 
         const paragraphElement = container.querySelector('p');
         expect(paragraphElement).toBeInTheDocument();
-        expect(paragraphElement).toHaveClass('paragraph');
+        expect(paragraphElement?.tagName).toBe('P');
     });
 
     /**
@@ -110,7 +110,7 @@ describe('Paragraph', () => {
 
         const paragraphElement = container.querySelector('p');
         expect(paragraphElement).toBeInTheDocument();
-        expect(paragraphElement).toHaveClass('paragraph');
+        expect(paragraphElement?.tagName).toBe('P');
         expect(paragraphElement?.textContent).toBe('');
     });
 
@@ -126,7 +126,7 @@ describe('Paragraph', () => {
 
         const paragraphElement = screen.getByText('paragraph text').closest('p');
         expect(paragraphElement).toBeInTheDocument();
-        expect(paragraphElement).toHaveClass('paragraph');
+        expect(paragraphElement?.tagName).toBe('P');
         expect(screen.getByText('Bold')).toBeInTheDocument();
     });
 

@@ -1,11 +1,13 @@
-.tips-container {
+import { css } from '@emotion/react';
+
+export const tipsContainer = css`
     height: 75vh;
     width: 75vw;
     display: flex;
     flex-direction: column;
-}
+`;
 
-.tips-header {
+export const tipsHeader = css`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,9 +18,9 @@
     h1 {
         margin: 0;
     }
-}
+`;
 
-.tips-close {
+export const tipsClose = css`
     padding: 0.5rem 0.75rem;
     cursor: pointer;
     background-color: rgb(41 41 46);
@@ -27,9 +29,9 @@
     font-size: 1.5rem;
     line-height: 1;
     border: none;
-}
+`;
 
-.tips-content {
+export const tipsContent = css`
     flex: 1;
     scroll-behavior: smooth;
     overflow-y: auto;
@@ -42,4 +44,4 @@
     & > h3 {
         font-style: italic;
     }
-}
+`;

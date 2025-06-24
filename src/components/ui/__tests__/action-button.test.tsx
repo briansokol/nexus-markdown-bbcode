@@ -26,7 +26,7 @@ describe('ActionButton', () => {
         expect(button).toBeInTheDocument();
         expect(button).toHaveAttribute('title', 'Copy to clipboard');
         expect(button).toHaveAttribute('type', 'button');
-        expect(button).toHaveClass('action-button');
+        expect(button.tagName).toBe('BUTTON');
     });
 
     /**
@@ -91,12 +91,10 @@ describe('ActionButton', () => {
         render(<ActionButton {...defaultProps} />);
 
         const button = screen.getByRole('button', { name: /copy/i });
-        const iconSpan = button.querySelector('.action-button-icon');
-        const labelSpan = button.querySelector('.action-button-label');
+        const spans = button.querySelectorAll('span');
 
-        expect(button).toHaveClass('action-button');
-        expect(iconSpan).toBeInTheDocument();
-        expect(labelSpan).toBeInTheDocument();
-        expect(labelSpan).toHaveTextContent('Copy');
+        expect(button.tagName).toBe('BUTTON');
+        expect(spans).toHaveLength(2);
+        expect(spans[1]).toHaveTextContent('Copy');
     });
 });

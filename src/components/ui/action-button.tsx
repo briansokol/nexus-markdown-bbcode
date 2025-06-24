@@ -1,4 +1,4 @@
-import '@/components/ui/action-button.css';
+import * as styles from '@/components/ui/action-button.styles';
 import type { MouseEventHandler } from 'react';
 import type { IconType } from 'react-icons';
 
@@ -14,15 +14,15 @@ export function ActionButton({ label, Icon, onClick, disabled = false, title }: 
     return (
         <button
             type="button"
-            className="action-button"
+            css={styles.actionButton}
             onClick={onClick}
             disabled={disabled}
             title={title}
         >
-            <span className="action-button-icon">
+            <span css={styles.actionButtonIcon}>
                 <Icon />
             </span>
-            <span className="action-button-label">{label}</span>
+            <span css={styles.actionButtonLabel}>{label}</span>
         </button>
     );
 }

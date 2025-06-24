@@ -1,4 +1,4 @@
-import '@/components/markdown/paragraph.css';
+import * as styles from '@/components/markdown/paragraph.styles';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
 
@@ -14,6 +14,6 @@ export function Paragraph({ mode, children = '', size }: ParagraphProps) {
             [size={size ?? 3}]{cleanChildren}[/size]{'\n'}
         </>
     ) : (
-        <p className={size === 2 ? 'caption' : 'paragraph'}>{children}</p>
+        <p css={size === 2 ? styles.caption : styles.paragraph}>{children}</p>
     );
 }

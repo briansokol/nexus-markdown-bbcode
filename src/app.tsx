@@ -1,4 +1,4 @@
-import '@/app.css';
+import * as styles from '@/app.styles';
 import { Bbcode } from '@/bbcode';
 import { Tips } from '@/components/tips/tips';
 import { Markdown } from '@/markdown';
@@ -184,8 +184,8 @@ export function App() {
     }, [tipsShown]);
 
     return (
-        <main className="app-container">
-            <dialog className="tips-dialog" ref={tipsDialogRef}>
+        <main css={styles.appContainer}>
+            <dialog css={styles.tipsDialog} ref={tipsDialogRef}>
                 {tipsShown ? <Tips closeHandler={handleToggleTips} /> : null}
             </dialog>
             <input
@@ -193,11 +193,11 @@ export function App() {
                 accept=".md,.markdown,.txt"
                 ref={fileInputRef}
                 onChange={handleFileRead}
-                className="hidden-file-input"
+                css={styles.hiddenFileInput}
                 aria-label="Select markdown file to load"
             />
-            <div className="buttons-container">
-                <div className="left-buttons">
+            <div css={styles.buttonsContainer}>
+                <div css={styles.leftButtons}>
                     <ActionButton
                         label="Load Markdown File"
                         title="Load a markdown file from your computer"
@@ -206,7 +206,7 @@ export function App() {
                     />
                     <input
                         type="text"
-                        className="filename-input"
+                        css={styles.filenameInput}
                         value={fileName}
                         onChange={handleFileNameChange}
                         placeholder="Name your file"
@@ -234,20 +234,20 @@ export function App() {
                     onClick={handleToggleTips}
                 />
             </div>
-            <div className="content-area">
-                <div className="editor-container">
+            <div css={styles.contentArea}>
+                <div css={styles.editorContainer} data-testid="editor-container">
                     <textarea
-                        className="markdown-input"
+                        css={styles.markdownInput}
                         value={markdownInput}
                         onChange={handleMarkdownChange}
                         placeholder="Type markdown here..."
                     />
                 </div>
-                <div className="preview-container">
+                <div css={styles.previewContainer} data-testid="preview-container">
                     {showBBCode ? (
                         <Bbcode markdownInput={markdownInput} />
                     ) : (
-                        <div className="html-preview" data-testid="html-preview">
+                        <div css={styles.htmlPreview} data-testid="html-preview">
                             <Markdown mode={'html'} markdownInput={markdownInput} />
                         </div>
                     )}

@@ -1,4 +1,6 @@
-.action-button {
+import { css } from '@emotion/react';
+
+export const actionButton = css`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,18 +13,18 @@
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s;
-}
 
-.action-button:hover {
-    background-color: #5a5a5a;
-}
+    &:hover {
+        background-color: #5a5a5a;
+    }
+`;
 
-.action-button-icon {
+export const actionButtonIcon = css`
     display: flex;
     align-items: center;
     font-size: 16px;
-}
+`;
 
-.action-button-label {
+export const actionButtonLabel = css`
     white-space: nowrap;
-}
+`;

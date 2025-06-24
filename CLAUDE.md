@@ -34,7 +34,7 @@ npm run test:coverage
 npm run test:ui
 ```
 
-**Lint code (ESLint + Stylelint):**
+**Lint code (ESLint only - no CSS files):**
 ```bash
 npm run lint
 ```
@@ -135,12 +135,64 @@ Add JSDoc comments to all functions and classes:
 
 ### File Naming
 - Components: camelCase (e.g., `header.tsx`)
-- CSS files: match component name (e.g., `header.css`)
-- Co-locate CSS files with components
+- Style files: match component name with `.styles.ts` suffix (e.g., `header.styles.ts`)
+- **Always co-locate style files** next to their most relevant component file
+
+### Styling with Emotion CSS-in-JS
+- **@emotion/react**: CSS-in-JS library for component styling
+- Style files use `.styles.ts` extension and export `css` objects
+- Use `css` prop on elements instead of `className`
+- Add `/** @jsxImportSource @emotion/react */` pragma to components using styles
+- Global styles are applied via `<Global styles={globalStyles} />` in main.tsx
+- **File placement**: Always place `.styles.ts` files next to the component that uses them most
+
+**Style file organization examples:**
+```
+src/
+├── app.tsx
+├── app.styles.ts                    # App-specific styles
+├── components/
+│   ├── ui/
+│   │   ├── action-button.tsx
+│   │   └── action-button.styles.ts  # ActionButton-specific styles
+│   └── markdown/
+│       ├── header.tsx
+│       └── header.styles.ts         # Header-specific styles
+└── global.styles.ts                 # Global/shared styles
+```
+
+Example style file (`component.styles.ts`):
+```typescript
+import { css } from '@emotion/react';
+
+export const container = css`
+  display: flex;
+  padding: 1rem;
+  background-color: #fff;
+`;
+
+export const title = css`
+  font-size: 1.5rem;
+  color: #333;
+`;
+```
+
+Example component usage:
+```typescript
+/** @jsxImportSource @emotion/react */
+import * as styles from './component.styles';
+
+export function Component() {
+  return (
+    <div css={styles.container}>
+      <h1 css={styles.title}>Title</h1>
+    </div>
+  );
+}
+```
 
 ### Code Quality Tools
 - **ESLint**: Strict TypeScript + React rules with Prettier integration
-- **Stylelint**: CSS linting with standard configuration
 - **Prettier**: Code formatting with import organization
 - **Husky + lint-staged**: Pre-commit hooks for quality checks
 
@@ -148,12 +200,13 @@ Add JSDoc comments to all functions and classes:
 
 **Core:**
 - React 19 + TypeScript
+- @emotion/react for CSS-in-JS styling
 - react-markdown with remark-gfm and remark-directive for markdown processing
 - Vite with vite-plugin-singlefile for building
 
 **Development:**
 - Vitest + @testing-library/react for testing
-- ESLint + Prettier + Stylelint for code quality
+- ESLint + Prettier for code quality
 - Husky for git hooks
 
 ## Performance Considerations

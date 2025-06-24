@@ -3,7 +3,12 @@ import path from 'node:path';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-    plugins: [react()],
+    plugins: [
+        react({
+            jsxImportSource: '@emotion/react',
+            plugins: [['@swc/plugin-emotion', {}]],
+        }),
+    ],
     test: {
         globals: true,
         environment: 'jsdom',

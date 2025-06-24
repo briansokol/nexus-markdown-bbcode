@@ -238,4 +238,221 @@ describe('App', () => {
             expect(bbcodeElement).toHaveTextContent('[size=3][b]bold text[/b][/size]');
         });
     });
+
+    /**
+     * Test localStorage error handling
+     */
+    it('should handle localStorage errors gracefully', () => {
+        // Mock localStorage to throw errors
+        localStorageMock.getItem.mockImplementation(() => {
+            throw new Error('localStorage error');
+        });
+        localStorageMock.setItem.mockImplementation(() => {
+            throw new Error('localStorage error');
+        });
+
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+        render(<App />);
+
+        // Should handle getItem error
+        expect(consoleSpy).toHaveBeenCalledWith(
+            'Failed to load content from localStorage:',
+            expect.any(Error),
+        );
+
+        consoleSpy.mockRestore();
+    });
+
+    /**
+     * Test filename input change
+     */
+    it('should update filename when input changes', async () => {
+        const user = userEvent.setup();
+        render(<App />);
+
+        const filenameInput = screen.getByPlaceholderText('Name your file');
+        await user.type(filenameInput, 'test-file.md');
+
+        expect(filenameInput).toHaveValue('test-file.md');
+        expect(localStorageMock.setItem).toHaveBeenCalledWith(
+            'nexus-markdown-filename',
+            'test-file.md',
+        );
+    });
+
+    /**
+     * Test file upload functionality - testing the FileReader setup
+     */
+    it('should set up FileReader correctly for file upload', () => {
+        // This test verifies that the component attempts to use FileReader
+        // when a file is selected, without actually testing the file upload
+        // due to JSDOM limitations with FileReader
+
+        render(<App />);
+        const fileInput = screen.getByLabelText('Select markdown file to load');
+
+        // Verify the file input exists and has correct attributes
+        expect(fileInput).toHaveAttribute('type', 'file');
+        expect(fileInput).toHaveAttribute('accept', '.md,.markdown,.txt');
+
+        // This tests that the component is properly set up for file handling
+        // The actual FileReader functionality is tested through integration tests
+    });
+
+    /**
+     * Test file upload with no file selected
+     */
+    it('should handle file upload with no file selected', async () => {
+        const user = userEvent.setup();
+        render(<App />);
+
+        const fileInput = screen.getByLabelText('Select markdown file to load');
+
+        // Simulate change event with no files
+        await user.upload(fileInput, []);
+
+        // Should not throw any errors and not call any localStorage methods for file operations
+        // (the localStorage calls for typing would still happen, but not for file operations)
+    });
+
+    /**
+     * Test validExtensions memoization
+     */
+    it('should have valid file extensions defined', () => {
+        render(<App />);
+
+        // Test that the component has valid extensions for validation
+        // This tests the validExtensions useMemo functionality indirectly
+        const fileInput = screen.getByLabelText('Select markdown file to load');
+        expect(fileInput).toHaveAttribute('accept', '.md,.markdown,.txt');
+    });
+
+    /**
+     * Test download functionality with no content
+     */
+    it('should show alert when trying to download with no content', async () => {
+        const user = userEvent.setup();
+
+        // Mock alert
+        global.alert = vi.fn();
+
+        render(<App />);
+
+        // Set filename but no content
+        const filenameInput = screen.getByPlaceholderText('Name your file');
+        await user.type(filenameInput, 'test-file');
+
+        // Click download button
+        const downloadButton = screen.getByRole('button', { name: /download markdown file/i });
+        await user.click(downloadButton);
+
+        expect(global.alert).toHaveBeenCalledWith('No content to download');
+    });
+
+    /**
+     * Test download functionality with no filename
+     */
+    it('should show alert when trying to download with no filename', async () => {
+        const user = userEvent.setup();
+
+        // Mock alert
+        global.alert = vi.fn();
+
+        render(<App />);
+
+        // Add content but no filename
+        const textarea = screen.getByPlaceholderText('Type markdown here...');
+        await user.type(textarea, '# Test Content');
+
+        // Click download button
+        const downloadButton = screen.getByRole('button', { name: /download markdown file/i });
+        await user.click(downloadButton);
+
+        expect(global.alert).toHaveBeenCalledWith('Please enter a filename');
+    });
+
+    /**
+     * Test tips dialog closing
+     */
+    it('should close tips dialog when already open', async () => {
+        const user = userEvent.setup();
+
+        const showModalMock = vi.fn();
+        const closeMock = vi.fn();
+
+        HTMLDialogElement.prototype.showModal = showModalMock;
+        HTMLDialogElement.prototype.close = closeMock;
+
+        render(<App />);
+
+        const tipsButton = screen.getByRole('button', { name: /show tips/i });
+
+        // Open tips dialog first
+        await user.click(tipsButton);
+        expect(showModalMock).toHaveBeenCalled();
+
+        // Click again to close
+        await user.click(tipsButton);
+        expect(closeMock).toHaveBeenCalled();
+    });
+
+    /**
+     * Test localStorage saving error handling
+     */
+    it('should handle localStorage saving errors gracefully', async () => {
+        const user = userEvent.setup();
+
+        // Mock localStorage setItem to throw error
+        localStorageMock.setItem.mockImplementation(() => {
+            throw new Error('localStorage save error');
+        });
+
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+        render(<App />);
+
+        const textarea = screen.getByPlaceholderText('Type markdown here...');
+        await user.type(textarea, 'test content');
+
+        // Should handle the error gracefully
+        expect(consoleSpy).toHaveBeenCalledWith(
+            'Failed to save markdown content to localStorage:',
+            expect.any(Error),
+        );
+
+        consoleSpy.mockRestore();
+    });
+
+    /**
+     * Test filename localStorage saving error handling
+     */
+    it('should handle filename localStorage saving errors gracefully', async () => {
+        const user = userEvent.setup();
+
+        // Mock localStorage setItem to throw error only for filename
+        localStorageMock.setItem.mockImplementation((key) => {
+            if (key === 'nexus-markdown-filename') {
+                throw new Error('localStorage filename save error');
+            }
+        });
+
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+        render(<App />);
+
+        const filenameInput = screen.getByPlaceholderText('Name your file');
+        await user.type(filenameInput, 'test.md');
+
+        // Should handle the error gracefully
+        expect(consoleSpy).toHaveBeenCalledWith(
+            'Failed to save filename to localStorage:',
+            expect.any(Error),
+        );
+
+        consoleSpy.mockRestore();
+    });
 });

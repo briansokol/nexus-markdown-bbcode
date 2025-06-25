@@ -23,9 +23,9 @@ export function Header({ mode, level, children }: HeaderProps) {
 
     return mode === 'bbcode' ? (
         <>
-            {`[size=${headerLevel[level]}][b]${level === '2' ? '[i]' : ''}${headerColor[level] ? `[color=${headerColor[level]}]` : ''}`}
+            {`[size=${headerLevel[level]}][font=Trebuchet MS][b]${level === '2' ? '[i]' : ''}${headerColor[level] ? `[color=${headerColor[level]}]` : ''}`}
             {cleanChildren}
-            {`${headerColor[level] ? '[/color]' : ''}${level === '2' ? '[/i]' : ''}[/b][/size]\n`}
+            {`${headerColor[level] ? '[/color]' : ''}${level === '2' ? '[/i]' : ''}[/b][/font][/size]\n`}
         </>
     ) : (
         <Tag css={level === '1' ? styles.header1 : styles.header2}>{children}</Tag>

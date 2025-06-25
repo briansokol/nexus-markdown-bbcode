@@ -560,9 +560,9 @@ exports[`MdExample > should render with header markdown 1`] = `
       <pre
         class="css-q6c39y"
       >
-        [size=5][b][color=#a5c4f3]
+        [size=5][font=Trebuchet MS][b][color=#a5c4f3]
         HEADER LEVEL 1
-        [/color][/b][/size]
+        [/color][/b][/font][/size]
 
       </pre>
     </div>

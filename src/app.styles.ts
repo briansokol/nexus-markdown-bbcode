@@ -66,19 +66,19 @@ export const contentArea = css`
 `;
 
 export const editorContainer = css`
-    width: 50%;
     height: 100%;
     padding: 1rem;
     box-sizing: border-box;
     padding-right: 0.5rem;
+    min-width: 200px;
 `;
 
 export const previewContainer = css`
-    width: 50%;
     height: 100%;
     padding: 1rem;
     box-sizing: border-box;
     padding-left: 0.5rem;
+    min-width: 200px;
 `;
 
 export const markdownInput = css`

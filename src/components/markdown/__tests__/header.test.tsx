@@ -46,11 +46,11 @@ describe('Header', () => {
         );
 
         const text = screen.getByText(
-            /\[size=5\]\[b\]\[color=#a5c4f3\].*\[\/color\]\[\/b\]\[\/size\]/,
+            /\[size=5\]\[font=Trebuchet MS\]\[b\]\[color=#a5c4f3\].*\[\/color\]\[\/b\]\[\/font\]\[\/size\]/,
         );
         expect(text).toBeInTheDocument();
         expect(text.textContent).toContain(
-            '[size=5][b][color=#a5c4f3]HEADER TEXT[/color][/b][/size]',
+            '[size=5][font=Trebuchet MS][b][color=#a5c4f3]HEADER TEXT[/color][/b][/font][/size]',
         );
         expect(text.textContent).toContain('\n');
     });
@@ -66,11 +66,11 @@ describe('Header', () => {
         );
 
         const text = screen.getByText(
-            /\[size=4\]\[b\]\[i\]\[color=#a5c4f3\].*\[\/color\]\[\/i\]\[\/b\]\[\/size\]/,
+            /\[size=4\]\[font=Trebuchet MS\]\[b\]\[i\]\[color=#a5c4f3\].*\[\/color\]\[\/i\]\[\/b\]\[\/font\]\[\/size\]/,
         );
         expect(text).toBeInTheDocument();
         expect(text.textContent).toContain(
-            '[size=4][b][i][color=#a5c4f3]HEADER TEXT[/color][/i][/b][/size]',
+            '[size=4][font=Trebuchet MS][b][i][color=#a5c4f3]HEADER TEXT[/color][/i][/b][/font][/size]',
         );
         expect(text.textContent).toContain('\n');
     });
@@ -97,7 +97,7 @@ describe('Header', () => {
         );
 
         const text = screen.getByText(
-            /\[size=5\]\[b\]\[color=#a5c4f3\].*\[\/color\]\[\/b\]\[\/size\]/,
+            /\[size=5\]\[font=Trebuchet MS\]\[b\]\[color=#a5c4f3\].*\[\/color\]\[\/b\]\[\/font\]\[\/size\]/,
         );
         expect(text.textContent).toContain('LOWERCASE HEADER');
     });
@@ -129,7 +129,7 @@ describe('Header', () => {
         );
 
         const text = screen.getByText(
-            /\[size=4\]\[b\]\[i\]\[color=#a5c4f3\].*\[\/color\]\[\/i\]\[\/b\]\[\/size\]/,
+            /\[size=4\]\[font=Trebuchet MS\]\[b\]\[i\]\[color=#a5c4f3\].*\[\/color\]\[\/i\]\[\/b\]\[\/font\]\[\/size\]/,
         );
         expect(text.textContent).toContain('NESTED HEADER CONTENT');
     });

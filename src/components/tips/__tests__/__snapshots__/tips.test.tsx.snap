@@ -63,9 +63,9 @@ exports[`Tips > should render consistently regardless of close handler function 
         <pre
           class="css-q6c39y"
         >
-          [size=5][b][color=#a5c4f3]
+          [size=5][font=Trebuchet MS][b][color=#a5c4f3]
           HEADER LEVEL 1
-          [/color][/b][/size]
+          [/color][/b][/font][/size]
 
         </pre>
       </div>
@@ -111,9 +111,9 @@ exports[`Tips > should render consistently regardless of close handler function 
         <pre
           class="css-q6c39y"
         >
-          [size=4][b][i][color=#a5c4f3]
+          [size=4][font=Trebuchet MS][b][i][color=#a5c4f3]
           HEADER LEVEL 2
-          [/color][/i][/b][/size]
+          [/color][/i][/b][/font][/size]
 
         </pre>
       </div>
@@ -1609,9 +1609,9 @@ exports[`Tips > should render tips component with all content sections 1`] = `
           <pre
             class="css-q6c39y"
           >
-            [size=5][b][color=#a5c4f3]
+            [size=5][font=Trebuchet MS][b][color=#a5c4f3]
             HEADER LEVEL 1
-            [/color][/b][/size]
+            [/color][/b][/font][/size]
 
           </pre>
         </div>
@@ -1657,9 +1657,9 @@ exports[`Tips > should render tips component with all content sections 1`] = `
           <pre
             class="css-q6c39y"
           >
-            [size=4][b][i][color=#a5c4f3]
+            [size=4][font=Trebuchet MS][b][i][color=#a5c4f3]
             HEADER LEVEL 2
-            [/color][/i][/b][/size]
+            [/color][/i][/b][/font][/size]
 
           </pre>
         </div>

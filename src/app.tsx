@@ -8,6 +8,7 @@ import { HiMiniCodeBracket } from 'react-icons/hi2';
 import { MdOutlineTipsAndUpdates } from 'react-icons/md';
 import { RiBracketsFill } from 'react-icons/ri';
 import { ActionButton } from './components/ui/action-button';
+import { ResizeHandle } from './components/ui/resize-handle';
 /**
  * localStorage key for storing markdown content
  */
@@ -22,6 +23,7 @@ export function App() {
     const [markdownInput, setMarkdownInput] = useState<string>('');
     const [showBBCode, setShowBBCode] = useState<boolean>(false);
     const [fileName, setFileName] = useState<string>('');
+    const [leftPanelWidth, setLeftPanelWidth] = useState<number>(50);
     const fileInputRef = useRef<HTMLInputElement>(null);
     const tipsDialogRef = useRef<HTMLDialogElement>(null);
     const [tipsShown, setTipsShown] = useState<boolean>(false);
@@ -171,6 +173,14 @@ export function App() {
     }, [showBBCode]);
 
     /**
+     * Handler for resize handle drag - updates panel widths
+     * @param newLeftWidth - The new width percentage for the left panel
+     */
+    const handleResize = useCallback((newLeftWidth: number) => {
+        setLeftPanelWidth(newLeftWidth);
+    }, []);
+
+    /**
      * Handler for file selection button click - triggers the hidden file input
      */
     const handleToggleTips = useCallback(() => {
@@ -235,7 +245,11 @@ export function App() {
                 />
             </div>
             <div css={styles.contentArea}>
-                <div css={styles.editorContainer} data-testid="editor-container">
+                <div
+                    css={styles.editorContainer}
+                    data-testid="editor-container"
+                    style={{ width: `${leftPanelWidth.toString()}%` }}
+                >
                     <textarea
                         css={styles.markdownInput}
                         value={markdownInput}
@@ -243,7 +257,12 @@ export function App() {
                         placeholder="Type markdown here..."
                     />
                 </div>
-                <div css={styles.previewContainer} data-testid="preview-container">
+                <ResizeHandle onResize={handleResize} />
+                <div
+                    css={styles.previewContainer}
+                    data-testid="preview-container"
+                    style={{ width: `${(100 - leftPanelWidth).toString()}%` }}
+                >
                     {showBBCode ? (
                         <Bbcode markdownInput={markdownInput} />
                     ) : (

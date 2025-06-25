@@ -35,7 +35,15 @@ export function cleanBBCode(
 
     // If input is an array, clean each element
     if (Array.isArray(input)) {
-        return input.map((child: ReactNode) => cleanBBCode(child, uppercase));
+        return input.map((child: ReactNode) => {
+            const cleanedChild = cleanBBCode(child, uppercase);
+            // If it's a React element without a key, add an index-based key
+            if (isValidElement(cleanedChild) && cleanedChild.key === null) {
+                // eslint-disable-next-line react-x/no-clone-element
+                return React.cloneElement(cleanedChild, { key: JSON.stringify(child) });
+            }
+            return cleanedChild;
+        });
     }
 
     // If input is a React element, reconstruct it with cleaned children

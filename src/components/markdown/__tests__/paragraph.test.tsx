@@ -16,35 +16,19 @@ describe('Paragraph', () => {
     });
 
     /**
-     * Test that Paragraph component renders as p element with caption class for size 2
-     */
-    it('should render as p element with caption class for size 2', () => {
-        render(
-            <Paragraph mode="html" size={2}>
-                Caption text
-            </Paragraph>,
-        );
-
-        const paragraphElement = screen.getByText('Caption text');
-        expect(paragraphElement).toBeInTheDocument();
-        expect(paragraphElement.tagName).toBe('P');
-        expect(paragraphElement.tagName).toBe('P');
-    });
-
-    /**
      * Test that Paragraph component renders as p element with paragraph class for size 3
      */
-    it('should render as p element with paragraph class for size 3', () => {
+    it('should render as span element when caption is true', () => {
         render(
-            <Paragraph mode="html" size={3}>
+            <Paragraph mode="html" caption={true}>
                 Paragraph text
             </Paragraph>,
         );
 
         const paragraphElement = screen.getByText('Paragraph text');
         expect(paragraphElement).toBeInTheDocument();
-        expect(paragraphElement.tagName).toBe('P');
-        expect(paragraphElement.tagName).toBe('P');
+        expect(paragraphElement.tagName).toBe('SPAN');
+        expect(paragraphElement.tagName).toBe('SPAN');
     });
 
     /**
@@ -64,7 +48,7 @@ describe('Paragraph', () => {
      */
     it('should render size 2 BBCode in bbcode mode', () => {
         render(
-            <Paragraph mode="bbcode" size={2}>
+            <Paragraph mode="bbcode" caption={true}>
                 Caption text
             </Paragraph>,
         );
@@ -79,11 +63,7 @@ describe('Paragraph', () => {
      * Test that Paragraph component renders size 3 BBCode in bbcode mode
      */
     it('should render size 3 BBCode in bbcode mode', () => {
-        render(
-            <Paragraph mode="bbcode" size={3}>
-                Paragraph text
-            </Paragraph>,
-        );
+        render(<Paragraph mode="bbcode">Paragraph text</Paragraph>);
 
         const text = screen.getByText(/\[size=3\].*\[\/size\]/);
         expect(text).toBeInTheDocument();

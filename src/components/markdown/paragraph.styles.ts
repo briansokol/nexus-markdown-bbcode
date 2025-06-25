@@ -1,15 +1,10 @@
+import { sizeMap } from '@/theme-manager/options';
+import type { SizeOption } from '@/theme-manager/types';
 import { css } from '@emotion/react';
 
-export const paragraph = css`
-    font-size: 16px;
-    line-height: 20.8px;
+export const paragraph = (size: SizeOption, isCaption: boolean) => css`
+    font-size: ${sizeMap[size]}px;
+    line-height: ${sizeMap[size] * 1.3}px;
     font-weight: 300;
-    margin: 0 0 1rem;
-`;
-
-export const caption = css`
-    font-size: 13px;
-    line-height: 16.9px;
-    font-weight: 300;
-    margin: 0;
+    margin: ${isCaption ? '0' : '0 0 1rem'};
 `;

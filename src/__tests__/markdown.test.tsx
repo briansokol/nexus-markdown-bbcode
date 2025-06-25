@@ -57,7 +57,7 @@ describe('Markdown', () => {
 
         // Check for BBCode header components (size=4 for level 2 headers)
         expect(container.textContent).toContain('[size=4]');
-        expect(container.textContent).toContain('[b]');
+        expect(container.textContent).not.toContain('[b]'); // level2 headers don't have bold
         expect(container.textContent).toContain('[i]');
         expect(container.textContent).toContain('HEADER LEVEL 3');
     });
@@ -72,7 +72,7 @@ describe('Markdown', () => {
 
         // Check for BBCode header components (size=4 for level 2 headers)
         expect(container.textContent).toContain('[size=4]');
-        expect(container.textContent).toContain('[b]');
+        expect(container.textContent).not.toContain('[b]'); // level2 headers don't have bold
         expect(container.textContent).toContain('[i]');
         expect(container.textContent).toContain('HEADER LEVEL 4');
     });
@@ -87,7 +87,7 @@ describe('Markdown', () => {
 
         // Check for BBCode header components (size=4 for level 2 headers)
         expect(container.textContent).toContain('[size=4]');
-        expect(container.textContent).toContain('[b]');
+        expect(container.textContent).not.toContain('[b]'); // level2 headers don't have bold
         expect(container.textContent).toContain('[i]');
         expect(container.textContent).toContain('HEADER LEVEL 5');
     });
@@ -102,7 +102,7 @@ describe('Markdown', () => {
 
         // Check for BBCode header components (size=4 for level 2 headers)
         expect(container.textContent).toContain('[size=4]');
-        expect(container.textContent).toContain('[b]');
+        expect(container.textContent).not.toContain('[b]'); // level2 headers don't have bold
         expect(container.textContent).toContain('[i]');
         expect(container.textContent).toContain('HEADER LEVEL 6');
     });

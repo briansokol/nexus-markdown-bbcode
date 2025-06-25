@@ -120,11 +120,11 @@ exports[`MdExample > should render with alignment directive 1`] = `
       <p
         class="css-1bqejpo"
       >
-        <div
+        <span
           class="css-qjem27"
         >
           Centered text
-        </div>
+        </span>
       </p>
     </div>
   </div>
@@ -246,11 +246,11 @@ exports[`MdExample > should render with caption directive 1`] = `
       <p
         class="css-1bqejpo"
       >
-        <p
-          class="css-1vfwp7t"
+        <span
+          class="css-1oll1t"
         >
           This is a caption
-        </p>
+        </span>
       </p>
     </div>
   </div>
@@ -459,7 +459,7 @@ exports[`MdExample > should render with complex nested alignment 1`] = `
       >
         HTML Output
       </h5>
-      <div
+      <span
         class="css-qjem27"
       >
         <p
@@ -474,13 +474,13 @@ exports[`MdExample > should render with complex nested alignment 1`] = `
         <p
           class="css-1bqejpo"
         >
-          <p
-            class="css-1vfwp7t"
+          <span
+            class="css-1oll1t"
           >
             Official Addon Banner
-          </p>
+          </span>
         </p>
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -560,9 +560,16 @@ exports[`MdExample > should render with header markdown 1`] = `
       <pre
         class="css-q6c39y"
       >
-        [size=5][font=Trebuchet MS][b][color=#a5c4f3]
+        [size=5]
+        [font=Trebuchet MS]
+        [b]
+        [color=#a5c4f3]
         HEADER LEVEL 1
-        [/color][/b][/font][/size]
+        [/color]
+        [/b]
+        [/font]
+        [/size]
+        
 
       </pre>
     </div>
@@ -573,7 +580,7 @@ exports[`MdExample > should render with header markdown 1`] = `
         HTML Output
       </h5>
       <h1
-        class="css-yrxof4"
+        class="css-brkr6t"
       >
         Header Level 1
       </h1>

@@ -4,9 +4,9 @@ import { Align } from '../align';
 
 describe('Align', () => {
     /**
-     * Test that Align component renders as div with center class in html mode
+     * Test that Align component renders as span with center class in html mode
      */
-    it('should render as center div in html mode', () => {
+    it('should render as center span in html mode', () => {
         render(
             <Align mode="html" alignment="center">
                 Centered text
@@ -15,14 +15,13 @@ describe('Align', () => {
 
         const alignElement = screen.getByText('Centered text');
         expect(alignElement).toBeInTheDocument();
-        expect(alignElement.tagName).toBe('DIV');
-        expect(alignElement.tagName).toBe('DIV');
+        expect(alignElement.tagName).toBe('SPAN');
     });
 
     /**
-     * Test that Align component renders as div with right class in html mode
+     * Test that Align component renders as span with right class in html mode
      */
-    it('should render as right div in html mode', () => {
+    it('should render as right span in html mode', () => {
         render(
             <Align mode="html" alignment="right">
                 Right aligned text
@@ -31,8 +30,7 @@ describe('Align', () => {
 
         const alignElement = screen.getByText('Right aligned text');
         expect(alignElement).toBeInTheDocument();
-        expect(alignElement.tagName).toBe('DIV');
-        expect(alignElement.tagName).toBe('DIV');
+        expect(alignElement.tagName).toBe('SPAN');
     });
 
     /**
@@ -67,7 +65,7 @@ describe('Align', () => {
     it('should handle empty children', () => {
         const { container } = render(<Align mode="html" alignment="center"></Align>);
 
-        const alignElement = container.querySelector('div');
+        const alignElement = container.querySelector('span');
         expect(alignElement).toBeInTheDocument();
         expect(alignElement).toBeEmptyDOMElement();
     });
@@ -96,9 +94,9 @@ describe('Align', () => {
             </Align>,
         );
 
-        const alignElement = screen.getByText('content').closest('div');
+        const alignElement = screen.getByText('content').closest('span');
         expect(alignElement).toBeInTheDocument();
-        expect(alignElement?.tagName).toBe('DIV');
+        expect(alignElement?.tagName).toBe('SPAN');
         expect(screen.getByText('Nested')).toBeInTheDocument();
     });
 });

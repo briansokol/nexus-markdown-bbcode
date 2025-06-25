@@ -122,7 +122,7 @@ export function Markdown({ markdownInput, mode }: MarkdownProps) {
                 return <YouTube mode={mode} {...props} />;
             },
             small({ node, ...props }) {
-                return <Paragraph size={2} mode={mode} {...props} />;
+                return <Paragraph caption={true} mode={mode} {...props} />;
             },
             code({ node, ...props }) {
                 return <Code mode={mode} {...props} />;

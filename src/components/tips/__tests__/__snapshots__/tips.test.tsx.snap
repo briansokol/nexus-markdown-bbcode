@@ -63,9 +63,16 @@ exports[`Tips > should render consistently regardless of close handler function 
         <pre
           class="css-q6c39y"
         >
-          [size=5][font=Trebuchet MS][b][color=#a5c4f3]
+          [size=5]
+          [font=Trebuchet MS]
+          [b]
+          [color=#a5c4f3]
           HEADER LEVEL 1
-          [/color][/b][/font][/size]
+          [/color]
+          [/b]
+          [/font]
+          [/size]
+          
 
         </pre>
       </div>
@@ -76,7 +83,7 @@ exports[`Tips > should render consistently regardless of close handler function 
           HTML Output
         </h5>
         <h1
-          class="css-yrxof4"
+          class="css-brkr6t"
         >
           Header Level 1
         </h1>
@@ -111,9 +118,16 @@ exports[`Tips > should render consistently regardless of close handler function 
         <pre
           class="css-q6c39y"
         >
-          [size=4][font=Trebuchet MS][b][i][color=#a5c4f3]
+          [size=4]
+          [font=Trebuchet MS]
+          [i]
+          [color=#a5c4f3]
           HEADER LEVEL 2
-          [/color][/i][/b][/font][/size]
+          [/color]
+          [/i]
+          [/font]
+          [/size]
+          
 
         </pre>
       </div>
@@ -124,7 +138,7 @@ exports[`Tips > should render consistently regardless of close handler function 
           HTML Output
         </h5>
         <h2
-          class="css-1kcsna3"
+          class="css-w6d855"
         >
           Header Level 2
         </h2>
@@ -208,69 +222,67 @@ This is another paragraph.
     <p>
       Smaller paragraphs can be used for captions for images and videos.
     </p>
-    <p>
-      <div
-        class="css-h572dx"
+    <div
+      class="css-h572dx"
+    >
+      <h4
+        class="css-1j4b27w"
       >
-        <h4
-          class="css-1j4b27w"
+        Example:
+      </h4>
+      <div>
+        <h5
+          class="css-17t88eq"
         >
-          Example:
-        </h4>
-        <div>
-          <h5
-            class="css-17t88eq"
-          >
-            Example Markdown Input
-          </h5>
-          <pre
-            class="css-q6c39y"
-          >
-            :small[This is a caption]
-          </pre>
-        </div>
-        <div>
-          <h5
-            class="css-17t88eq"
-          >
-            BBCode Output
-          </h5>
-          <pre
-            class="css-q6c39y"
-          >
-            [size=
-            3
-            ]
-            [size=
-            2
-            ]
-            This is a caption
-            [/size]
-            
-
-            [/size]
-            
-
-          </pre>
-        </div>
-        <div>
-          <h5
-            class="css-17t88eq"
-          >
-            HTML Output
-          </h5>
-          <p
-            class="css-1bqejpo"
-          >
-            <p
-              class="css-1vfwp7t"
-            >
-              This is a caption
-            </p>
-          </p>
-        </div>
+          Example Markdown Input
+        </h5>
+        <pre
+          class="css-q6c39y"
+        >
+          :small[This is a caption]
+        </pre>
       </div>
-    </p>
+      <div>
+        <h5
+          class="css-17t88eq"
+        >
+          BBCode Output
+        </h5>
+        <pre
+          class="css-q6c39y"
+        >
+          [size=
+          3
+          ]
+          [size=
+          2
+          ]
+          This is a caption
+          [/size]
+          
+
+          [/size]
+          
+
+        </pre>
+      </div>
+      <div>
+        <h5
+          class="css-17t88eq"
+        >
+          HTML Output
+        </h5>
+        <p
+          class="css-1bqejpo"
+        >
+          <span
+            class="css-1oll1t"
+          >
+            This is a caption
+          </span>
+        </p>
+      </div>
+    </div>
     <h3>
       Formatting
     </h3>
@@ -894,11 +906,11 @@ This is another paragraph.
         <p
           class="css-1bqejpo"
         >
-          <div
+          <span
             class="css-qjem27"
           >
             Centered text
-          </div>
+          </span>
         </p>
       </div>
     </div>
@@ -955,11 +967,11 @@ This is another paragraph.
         <p
           class="css-1bqejpo"
         >
-          <div
+          <span
             class="css-derz3z"
           >
             Right-aligned text
-          </div>
+          </span>
         </p>
       </div>
     </div>
@@ -1035,7 +1047,7 @@ This is another paragraph.
         >
           HTML Output
         </h5>
-        <div
+        <span
           class="css-qjem27"
         >
           <p
@@ -1050,13 +1062,13 @@ This is another paragraph.
           <p
             class="css-1bqejpo"
           >
-            <p
-              class="css-1vfwp7t"
+            <span
+              class="css-1oll1t"
             >
               Official Addon Banner
-            </p>
+            </span>
           </p>
-        </div>
+        </span>
       </div>
     </div>
     <h2>
@@ -1609,9 +1621,16 @@ exports[`Tips > should render tips component with all content sections 1`] = `
           <pre
             class="css-q6c39y"
           >
-            [size=5][font=Trebuchet MS][b][color=#a5c4f3]
+            [size=5]
+            [font=Trebuchet MS]
+            [b]
+            [color=#a5c4f3]
             HEADER LEVEL 1
-            [/color][/b][/font][/size]
+            [/color]
+            [/b]
+            [/font]
+            [/size]
+            
 
           </pre>
         </div>
@@ -1622,7 +1641,7 @@ exports[`Tips > should render tips component with all content sections 1`] = `
             HTML Output
           </h5>
           <h1
-            class="css-yrxof4"
+            class="css-brkr6t"
           >
             Header Level 1
           </h1>
@@ -1657,9 +1676,16 @@ exports[`Tips > should render tips component with all content sections 1`] = `
           <pre
             class="css-q6c39y"
           >
-            [size=4][font=Trebuchet MS][b][i][color=#a5c4f3]
+            [size=4]
+            [font=Trebuchet MS]
+            [i]
+            [color=#a5c4f3]
             HEADER LEVEL 2
-            [/color][/i][/b][/font][/size]
+            [/color]
+            [/i]
+            [/font]
+            [/size]
+            
 
           </pre>
         </div>
@@ -1670,7 +1696,7 @@ exports[`Tips > should render tips component with all content sections 1`] = `
             HTML Output
           </h5>
           <h2
-            class="css-1kcsna3"
+            class="css-w6d855"
           >
             Header Level 2
           </h2>
@@ -1754,69 +1780,67 @@ This is another paragraph.
       <p>
         Smaller paragraphs can be used for captions for images and videos.
       </p>
-      <p>
-        <div
-          class="css-h572dx"
+      <div
+        class="css-h572dx"
+      >
+        <h4
+          class="css-1j4b27w"
         >
-          <h4
-            class="css-1j4b27w"
+          Example:
+        </h4>
+        <div>
+          <h5
+            class="css-17t88eq"
           >
-            Example:
-          </h4>
-          <div>
-            <h5
-              class="css-17t88eq"
-            >
-              Example Markdown Input
-            </h5>
-            <pre
-              class="css-q6c39y"
-            >
-              :small[This is a caption]
-            </pre>
-          </div>
-          <div>
-            <h5
-              class="css-17t88eq"
-            >
-              BBCode Output
-            </h5>
-            <pre
-              class="css-q6c39y"
-            >
-              [size=
-              3
-              ]
-              [size=
-              2
-              ]
-              This is a caption
-              [/size]
-              
-
-              [/size]
-              
-
-            </pre>
-          </div>
-          <div>
-            <h5
-              class="css-17t88eq"
-            >
-              HTML Output
-            </h5>
-            <p
-              class="css-1bqejpo"
-            >
-              <p
-                class="css-1vfwp7t"
-              >
-                This is a caption
-              </p>
-            </p>
-          </div>
+            Example Markdown Input
+          </h5>
+          <pre
+            class="css-q6c39y"
+          >
+            :small[This is a caption]
+          </pre>
         </div>
-      </p>
+        <div>
+          <h5
+            class="css-17t88eq"
+          >
+            BBCode Output
+          </h5>
+          <pre
+            class="css-q6c39y"
+          >
+            [size=
+            3
+            ]
+            [size=
+            2
+            ]
+            This is a caption
+            [/size]
+            
+
+            [/size]
+            
+
+          </pre>
+        </div>
+        <div>
+          <h5
+            class="css-17t88eq"
+          >
+            HTML Output
+          </h5>
+          <p
+            class="css-1bqejpo"
+          >
+            <span
+              class="css-1oll1t"
+            >
+              This is a caption
+            </span>
+          </p>
+        </div>
+      </div>
       <h3>
         Formatting
       </h3>
@@ -2440,11 +2464,11 @@ This is another paragraph.
           <p
             class="css-1bqejpo"
           >
-            <div
+            <span
               class="css-qjem27"
             >
               Centered text
-            </div>
+            </span>
           </p>
         </div>
       </div>
@@ -2501,11 +2525,11 @@ This is another paragraph.
           <p
             class="css-1bqejpo"
           >
-            <div
+            <span
               class="css-derz3z"
             >
               Right-aligned text
-            </div>
+            </span>
           </p>
         </div>
       </div>
@@ -2581,7 +2605,7 @@ This is another paragraph.
           >
             HTML Output
           </h5>
-          <div
+          <span
             class="css-qjem27"
           >
             <p
@@ -2596,13 +2620,13 @@ This is another paragraph.
             <p
               class="css-1bqejpo"
             >
-              <p
-                class="css-1vfwp7t"
+              <span
+                class="css-1oll1t"
               >
                 Official Addon Banner
-              </p>
+              </span>
             </p>
-          </div>
+          </span>
         </div>
       </div>
       <h2>

@@ -14,6 +14,8 @@ export function Align({ mode, alignment, children }: AlignProps) {
             [{alignment}]{cleanChildren}[/{alignment}]
         </>
     ) : (
-        <div css={alignment === 'center' ? styles.alignCenter : styles.alignRight}>{children}</div>
+        <span css={alignment === 'center' ? styles.alignCenter : styles.alignRight}>
+            {children}
+        </span>
     );
 }

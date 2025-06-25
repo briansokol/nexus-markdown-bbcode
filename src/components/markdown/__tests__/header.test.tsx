@@ -66,11 +66,11 @@ describe('Header', () => {
         );
 
         const text = screen.getByText(
-            /\[size=4\]\[font=Trebuchet MS\]\[b\]\[i\]\[color=#a5c4f3\].*\[\/color\]\[\/i\]\[\/b\]\[\/font\]\[\/size\]/,
+            /\[size=4\]\[font=Trebuchet MS\]\[i\]\[color=#a5c4f3\].*\[\/color\]\[\/i\]\[\/font\]\[\/size\]/,
         );
         expect(text).toBeInTheDocument();
         expect(text.textContent).toContain(
-            '[size=4][font=Trebuchet MS][b][i][color=#a5c4f3]HEADER TEXT[/color][/i][/b][/font][/size]',
+            '[size=4][font=Trebuchet MS][i][color=#a5c4f3]HEADER TEXT[/color][/i][/font][/size]',
         );
         expect(text.textContent).toContain('\n');
     });
@@ -129,7 +129,7 @@ describe('Header', () => {
         );
 
         const text = screen.getByText(
-            /\[size=4\]\[font=Trebuchet MS\]\[b\]\[i\]\[color=#a5c4f3\].*\[\/color\]\[\/i\]\[\/b\]\[\/font\]\[\/size\]/,
+            /\[size=4\]\[font=Trebuchet MS\]\[i\]\[color=#a5c4f3\].*\[\/color\]\[\/i\]\[\/font\]\[\/size\]/,
         );
         expect(text.textContent).toContain('NESTED HEADER CONTENT');
     });

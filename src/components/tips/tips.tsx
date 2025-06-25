@@ -39,9 +39,7 @@ export function Tips({ closeHandler }: TipsProps) {
                 <MdExample>This is a paragraph.{'\n\n'}This is another paragraph.</MdExample>
 
                 <p>Smaller paragraphs can be used for captions for images and videos.</p>
-                <p>
-                    <MdExample>:small[This is a caption]</MdExample>
-                </p>
+                <MdExample>:small[This is a caption]</MdExample>
 
                 <h3>Formatting</h3>
                 <p>

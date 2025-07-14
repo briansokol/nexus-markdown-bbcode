@@ -4,16 +4,16 @@ exports[`Tips > should have proper component structure 1`] = `null`;
 
 exports[`Tips > should render consistently regardless of close handler function 1`] = `
 <div
-  class="css-d1yrl1"
+  class="css-2cuqa4"
 >
   <div
-    class="css-14w0la7"
+    class="css-xbl8lz"
   >
     <h1>
       Tips
     </h1>
     <button
-      class="css-1ltnugt"
+      class="css-1nh8rtj"
       type="button"
     >
       ×
@@ -35,7 +35,7 @@ exports[`Tips > should render consistently regardless of close handler function 
       Headers are defined using hash symbols. This tool supports h1 and h2 levels.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -83,14 +83,14 @@ exports[`Tips > should render consistently regardless of close handler function 
           HTML Output
         </h5>
         <h1
-          class="css-brkr6t"
+          class="css-1mot183"
         >
           Header Level 1
         </h1>
       </div>
     </div>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -138,7 +138,7 @@ exports[`Tips > should render consistently regardless of close handler function 
           HTML Output
         </h5>
         <h2
-          class="css-w6d855"
+          class="css-9n0za"
         >
           Header Level 2
         </h2>
@@ -151,7 +151,7 @@ exports[`Tips > should render consistently regardless of close handler function 
       Paragraphs need no special tags. They are any text not surrounded by other tags. At least 2 newlines between lines are needed in order to split a paragraph.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -223,7 +223,7 @@ This is another paragraph.
       Smaller paragraphs can be used for captions for images and videos.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -290,7 +290,7 @@ This is another paragraph.
       Certain inline styles can be applied to text. The following styles are supported:
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -349,7 +349,7 @@ This is another paragraph.
       </div>
     </div>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -408,7 +408,7 @@ This is another paragraph.
       </div>
     </div>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -467,7 +467,7 @@ This is another paragraph.
       </div>
     </div>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -536,7 +536,7 @@ This is another paragraph.
       Links are defined using square brackets for the text and parentheses for the URL. The following format is supported for text only:
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -604,7 +604,7 @@ This is another paragraph.
       Several text colors are supported through custom directives. The following colors are supported:
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -665,7 +665,7 @@ This is another paragraph.
       </div>
     </div>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -726,7 +726,7 @@ This is another paragraph.
       </div>
     </div>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -787,7 +787,7 @@ This is another paragraph.
       </div>
     </div>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -854,7 +854,7 @@ This is another paragraph.
       Text alignment can be set using custom directives. The following alignments are supported (with left alignment being the default):
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -915,7 +915,7 @@ This is another paragraph.
       </div>
     </div>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -979,7 +979,7 @@ This is another paragraph.
       Multiple lines can be centered in a group. This can also include images and other markdown tags.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -1084,7 +1084,7 @@ This is another paragraph.
       Unordered lists are defined using asterisks, pluses, or hyphens.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -1147,7 +1147,7 @@ This is another paragraph.
       Ordered lists are defined using numbers followed by a period.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -1213,7 +1213,7 @@ This is another paragraph.
       Images are defined using an exclamation mark followed by square brackets for the alt text and parentheses for the URL. BBCode doesn't use the alt text, but it is still useful for remembering which images are which when reading the markdown.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -1276,7 +1276,7 @@ This is another paragraph.
       YouTube videos can be embedded using a custom directive. Take the "v" value (the video ID) from the URL and provide it to the directive.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -1342,7 +1342,7 @@ This is another paragraph.
       Spoilers are defined using a custom directive. Content within the spoiler must be wrapped in triple-colons. Spoilers will not be collapsable in the HTML preview.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -1427,7 +1427,7 @@ Anything can go inside a spoiler.
       Surround your code with single back-ticks.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -1492,7 +1492,7 @@ Anything can go inside a spoiler.
       Add triple back-ticks on the lines before and after the code block.
     </p>
     <div
-      class="css-h572dx"
+      class="css-fozzyn"
     >
       <h4
         class="css-1j4b27w"
@@ -1562,16 +1562,16 @@ exports[`Tips > should render header section correctly 1`] = `null`;
 exports[`Tips > should render tips component with all content sections 1`] = `
 <div>
   <div
-    class="css-d1yrl1"
+    class="css-2cuqa4"
   >
     <div
-      class="css-14w0la7"
+      class="css-xbl8lz"
     >
       <h1>
         Tips
       </h1>
       <button
-        class="css-1ltnugt"
+        class="css-1nh8rtj"
         type="button"
       >
         ×
@@ -1593,7 +1593,7 @@ exports[`Tips > should render tips component with all content sections 1`] = `
         Headers are defined using hash symbols. This tool supports h1 and h2 levels.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -1641,14 +1641,14 @@ exports[`Tips > should render tips component with all content sections 1`] = `
             HTML Output
           </h5>
           <h1
-            class="css-brkr6t"
+            class="css-1mot183"
           >
             Header Level 1
           </h1>
         </div>
       </div>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -1696,7 +1696,7 @@ exports[`Tips > should render tips component with all content sections 1`] = `
             HTML Output
           </h5>
           <h2
-            class="css-w6d855"
+            class="css-9n0za"
           >
             Header Level 2
           </h2>
@@ -1709,7 +1709,7 @@ exports[`Tips > should render tips component with all content sections 1`] = `
         Paragraphs need no special tags. They are any text not surrounded by other tags. At least 2 newlines between lines are needed in order to split a paragraph.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -1781,7 +1781,7 @@ This is another paragraph.
         Smaller paragraphs can be used for captions for images and videos.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -1848,7 +1848,7 @@ This is another paragraph.
         Certain inline styles can be applied to text. The following styles are supported:
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -1907,7 +1907,7 @@ This is another paragraph.
         </div>
       </div>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -1966,7 +1966,7 @@ This is another paragraph.
         </div>
       </div>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2025,7 +2025,7 @@ This is another paragraph.
         </div>
       </div>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2094,7 +2094,7 @@ This is another paragraph.
         Links are defined using square brackets for the text and parentheses for the URL. The following format is supported for text only:
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2162,7 +2162,7 @@ This is another paragraph.
         Several text colors are supported through custom directives. The following colors are supported:
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2223,7 +2223,7 @@ This is another paragraph.
         </div>
       </div>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2284,7 +2284,7 @@ This is another paragraph.
         </div>
       </div>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2345,7 +2345,7 @@ This is another paragraph.
         </div>
       </div>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2412,7 +2412,7 @@ This is another paragraph.
         Text alignment can be set using custom directives. The following alignments are supported (with left alignment being the default):
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2473,7 +2473,7 @@ This is another paragraph.
         </div>
       </div>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2537,7 +2537,7 @@ This is another paragraph.
         Multiple lines can be centered in a group. This can also include images and other markdown tags.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2642,7 +2642,7 @@ This is another paragraph.
         Unordered lists are defined using asterisks, pluses, or hyphens.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2705,7 +2705,7 @@ This is another paragraph.
         Ordered lists are defined using numbers followed by a period.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2771,7 +2771,7 @@ This is another paragraph.
         Images are defined using an exclamation mark followed by square brackets for the alt text and parentheses for the URL. BBCode doesn't use the alt text, but it is still useful for remembering which images are which when reading the markdown.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2834,7 +2834,7 @@ This is another paragraph.
         YouTube videos can be embedded using a custom directive. Take the "v" value (the video ID) from the URL and provide it to the directive.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2900,7 +2900,7 @@ This is another paragraph.
         Spoilers are defined using a custom directive. Content within the spoiler must be wrapped in triple-colons. Spoilers will not be collapsable in the HTML preview.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -2985,7 +2985,7 @@ Anything can go inside a spoiler.
         Surround your code with single back-ticks.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"
@@ -3050,7 +3050,7 @@ Anything can go inside a spoiler.
         Add triple back-ticks on the lines before and after the code block.
       </p>
       <div
-        class="css-h572dx"
+        class="css-fozzyn"
       >
         <h4
           class="css-1j4b27w"

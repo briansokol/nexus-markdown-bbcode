@@ -9,13 +9,13 @@ interface HeaderProps extends BBCodeComponentProps {
     level: '1' | '2';
 }
 
-export function Header({ mode, level, children }: HeaderProps) {
+export function Header({ mode, level, children, tempTheme }: HeaderProps) {
     const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-    const theme = useThemeManager();
+    const theme = useThemeManager(tempTheme);
     const headerLevel = useMemo(() => theme.getHeaderLevel(level), [theme, level]);
     const css = useMemo(() => {
-        return styles.header(headerLevel);
-    }, [headerLevel]);
+        return styles.header(headerLevel, !tempTheme);
+    }, [headerLevel, tempTheme]);
     const fontFamily = useMemo(() => {
         return fontFamilyMap[headerLevel.fontFamily].bbcode;
     }, [headerLevel.fontFamily]);

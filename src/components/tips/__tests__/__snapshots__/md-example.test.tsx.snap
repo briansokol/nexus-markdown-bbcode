@@ -3,7 +3,7 @@
 exports[`MdExample > should render with YouTube directive 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -68,7 +68,7 @@ exports[`MdExample > should render with YouTube directive 1`] = `
 exports[`MdExample > should render with alignment directive 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -134,7 +134,7 @@ exports[`MdExample > should render with alignment directive 1`] = `
 exports[`MdExample > should render with array of strings 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -194,7 +194,7 @@ Line 3
 exports[`MdExample > should render with caption directive 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -260,7 +260,7 @@ exports[`MdExample > should render with caption directive 1`] = `
 exports[`MdExample > should render with code block 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -325,7 +325,7 @@ This is a multi-line code block
 exports[`MdExample > should render with color directive 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -391,7 +391,7 @@ exports[`MdExample > should render with color directive 1`] = `
 exports[`MdExample > should render with complex nested alignment 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -489,7 +489,7 @@ exports[`MdExample > should render with complex nested alignment 1`] = `
 exports[`MdExample > should render with empty content 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -532,7 +532,7 @@ exports[`MdExample > should render with empty content 1`] = `
 exports[`MdExample > should render with header markdown 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -580,7 +580,7 @@ exports[`MdExample > should render with header markdown 1`] = `
         HTML Output
       </h5>
       <h1
-        class="css-brkr6t"
+        class="css-1mot183"
       >
         Header Level 1
       </h1>
@@ -592,7 +592,7 @@ exports[`MdExample > should render with header markdown 1`] = `
 exports[`MdExample > should render with image markdown 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -654,7 +654,7 @@ exports[`MdExample > should render with image markdown 1`] = `
 exports[`MdExample > should render with inline code 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -718,7 +718,7 @@ exports[`MdExample > should render with inline code 1`] = `
 exports[`MdExample > should render with link 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -783,7 +783,7 @@ exports[`MdExample > should render with link 1`] = `
 exports[`MdExample > should render with mixed array content including newlines 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -843,7 +843,7 @@ Line 3
 exports[`MdExample > should render with multiple paragraphs 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -917,7 +917,7 @@ This is another paragraph.
 exports[`MdExample > should render with ordered list 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -979,7 +979,7 @@ exports[`MdExample > should render with ordered list 1`] = `
 exports[`MdExample > should render with simple string content 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -1045,7 +1045,7 @@ exports[`MdExample > should render with simple string content 1`] = `
 exports[`MdExample > should render with spoiler directive 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -1123,7 +1123,7 @@ Anything can go inside a spoiler.
 exports[`MdExample > should render with underline directive 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -1187,7 +1187,7 @@ exports[`MdExample > should render with underline directive 1`] = `
 exports[`MdExample > should render with unordered list 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"
@@ -1249,7 +1249,7 @@ exports[`MdExample > should render with unordered list 1`] = `
 exports[`MdExample > should render with various formatting styles 1`] = `
 <div>
   <div
-    class="css-h572dx"
+    class="css-fozzyn"
   >
     <h4
       class="css-1j4b27w"

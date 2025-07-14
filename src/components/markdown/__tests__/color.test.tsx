@@ -1,5 +1,4 @@
 import { render, screen } from '@/test/test-utils';
-import { Colors } from '@/types/components';
 import { describe, expect, it } from 'vitest';
 import { Color } from '../color';
 
@@ -9,7 +8,7 @@ describe('Color', () => {
      */
     it('should render red colored span in html mode', () => {
         render(
-            <Color mode="html" textColor={Colors.Red}>
+            <Color mode="html" textColor="red">
                 Red text
             </Color>,
         );
@@ -25,7 +24,7 @@ describe('Color', () => {
      */
     it('should render green colored span in html mode', () => {
         render(
-            <Color mode="html" textColor={Colors.Green}>
+            <Color mode="html" textColor="green">
                 Green text
             </Color>,
         );
@@ -41,7 +40,7 @@ describe('Color', () => {
      */
     it('should render blue colored span in html mode', () => {
         render(
-            <Color mode="html" textColor={Colors.Blue}>
+            <Color mode="html" textColor="blue">
                 Blue text
             </Color>,
         );
@@ -57,7 +56,7 @@ describe('Color', () => {
      */
     it('should render yellow colored span in html mode', () => {
         render(
-            <Color mode="html" textColor={Colors.Yellow}>
+            <Color mode="html" textColor="yellow">
                 Yellow text
             </Color>,
         );
@@ -73,7 +72,7 @@ describe('Color', () => {
      */
     it('should render red BBCode in bbcode mode', () => {
         render(
-            <Color mode="bbcode" textColor={Colors.Red}>
+            <Color mode="bbcode" textColor="red">
                 Red text
             </Color>,
         );
@@ -86,7 +85,7 @@ describe('Color', () => {
      */
     it('should render green BBCode in bbcode mode', () => {
         render(
-            <Color mode="bbcode" textColor={Colors.Green}>
+            <Color mode="bbcode" textColor="green">
                 Green text
             </Color>,
         );
@@ -99,7 +98,7 @@ describe('Color', () => {
      */
     it('should render blue BBCode in bbcode mode', () => {
         render(
-            <Color mode="bbcode" textColor={Colors.Blue}>
+            <Color mode="bbcode" textColor="blue">
                 Blue text
             </Color>,
         );
@@ -112,7 +111,7 @@ describe('Color', () => {
      */
     it('should render yellow BBCode in bbcode mode', () => {
         render(
-            <Color mode="bbcode" textColor={Colors.Yellow}>
+            <Color mode="bbcode" textColor="yellow">
                 Yellow text
             </Color>,
         );
@@ -124,7 +123,7 @@ describe('Color', () => {
      * Test that Color component handles empty children
      */
     it('should handle empty children', () => {
-        const { container } = render(<Color mode="html" textColor={Colors.Red}></Color>);
+        const { container } = render(<Color mode="html" textColor="red"></Color>);
 
         const colorElement = container.querySelector('span');
         expect(colorElement).toBeInTheDocument();
@@ -137,7 +136,7 @@ describe('Color', () => {
      */
     it('should handle nested elements', () => {
         render(
-            <Color mode="html" textColor={Colors.Blue}>
+            <Color mode="html" textColor="blue">
                 <strong>Bold</strong> blue text
             </Color>,
         );

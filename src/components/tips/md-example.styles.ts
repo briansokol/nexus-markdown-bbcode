@@ -5,8 +5,8 @@ export const mdExample = css`
     flex-direction: column;
     gap: 0.5rem;
     margin: 1rem 0;
-    border: 1px solid rgb(255 255 255 / 20%);
-    background-color: rgb(0 0 0 / 10%);
+    border: 1px solid hsl(240, 6%, 40%);
+    background-color: hsl(240, 6%, 20%);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 

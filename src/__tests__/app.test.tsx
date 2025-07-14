@@ -54,7 +54,8 @@ describe('App', () => {
         // Check for action buttons
         expect(screen.getByRole('button', { name: /^load markdown file/i })).toBeInTheDocument();
         expect(screen.getByRole('button', { name: /download markdown file/i })).toBeInTheDocument();
-        expect(screen.getByRole('button', { name: /show tips/i })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /tips/i })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /settings/i })).toBeInTheDocument();
 
         // Check for textarea
         expect(screen.getByPlaceholderText('Type markdown here...')).toBeInTheDocument();
@@ -149,7 +150,7 @@ describe('App', () => {
         render(<App />);
 
         // Get the tips button and click it
-        const tipsButton = screen.getByRole('button', { name: /show tips/i });
+        const tipsButton = screen.getByRole('button', { name: /tips/i });
         await user.click(tipsButton);
 
         // Check if showModal was called
@@ -387,7 +388,7 @@ describe('App', () => {
 
         render(<App />);
 
-        const tipsButton = screen.getByRole('button', { name: /show tips/i });
+        const tipsButton = screen.getByRole('button', { name: /tips/i });
 
         // Open tips dialog first
         await user.click(tipsButton);

@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 export const resizeHandle = css`
     width: 8px;
     height: 100%;
-    background-color: #444;
+    background-color: #2f2f2f;
     cursor: col-resize;
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@ export const resizeHandle = css`
     transition: background-color 0.2s ease;
 
     &:hover {
-        background-color: #555;
+        background-color: #444444;
     }
 `;
 

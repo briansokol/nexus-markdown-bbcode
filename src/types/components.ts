@@ -1,16 +1,11 @@
+import type { ThemeConfig } from '@/theme-manager/types';
 import type { ComponentType, JSX, ReactNode } from 'react';
 import type { ExtraProps } from 'react-markdown';
 
 export interface BBCodeComponentProps {
     mode: 'html' | 'bbcode';
+    tempTheme?: ThemeConfig;
     children?: ReactNode;
-}
-
-export enum Colors {
-    Red,
-    Green,
-    Blue,
-    Yellow,
 }
 
 export type CustomDirective<

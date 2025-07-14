@@ -33,6 +33,12 @@ export const leftButtons = css`
     gap: 0.5rem;
 `;
 
+export const rightButtons = css`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+`;
+
 export const hiddenFileInput = css`
     display: none;
 `;
@@ -109,12 +115,13 @@ export const htmlPreview = css`
     text-align: left;
 `;
 
-export const tipsDialog = css`
-    background-color: rgb(41 41 46);
+export const modalDialog = css`
+    background-color: hsl(240, 6%, 17%);
     color: #f1f1f1;
     border-radius: 1rem;
-    border: 1px solid #555;
+    border: 1px solid hsl(240, 6%, 40%);
     box-shadow: 0 10px 25px rgb(0 0 0 / 50%);
+    padding: 0;
 
     &::backdrop {
         background-color: rgb(0 0 0 / 50%);

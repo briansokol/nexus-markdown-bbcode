@@ -1,14 +1,15 @@
 import * as styles from '@/app.styles';
 import { Bbcode } from '@/bbcode';
+import { Settings } from '@/components/settings/settings';
 import { Tips } from '@/components/tips/tips';
+import { ActionButton } from '@/components/ui/action-button';
+import { ResizeHandle } from '@/components/ui/resize-handle';
 import { Markdown } from '@/markdown';
 import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react';
 import { FaDownload, FaUpload } from 'react-icons/fa6';
 import { HiMiniCodeBracket } from 'react-icons/hi2';
-import { MdOutlineTipsAndUpdates } from 'react-icons/md';
+import { MdOutlineSettings, MdOutlineTipsAndUpdates } from 'react-icons/md';
 import { RiBracketsFill } from 'react-icons/ri';
-import { ActionButton } from './components/ui/action-button';
-import { ResizeHandle } from './components/ui/resize-handle';
 /**
  * localStorage key for storing markdown content
  */
@@ -26,7 +27,9 @@ export function App() {
     const [leftPanelWidth, setLeftPanelWidth] = useState<number>(50);
     const fileInputRef = useRef<HTMLInputElement>(null);
     const tipsDialogRef = useRef<HTMLDialogElement>(null);
+    const settingsDialogRef = useRef<HTMLDialogElement>(null);
     const [tipsShown, setTipsShown] = useState<boolean>(false);
+    const [settingsShown, setSettingsShown] = useState<boolean>(false);
 
     /**
      * Load markdown content from localStorage on component mount
@@ -181,7 +184,7 @@ export function App() {
     }, []);
 
     /**
-     * Handler for file selection button click - triggers the hidden file input
+     * Handler for tips dialog toggle - shows or hides the tips dialog
      */
     const handleToggleTips = useCallback(() => {
         if (tipsShown) {
@@ -193,10 +196,26 @@ export function App() {
         setTipsShown(true);
     }, [tipsShown]);
 
+    /**
+     * Handler for settings dialog toggle - shows or hides the settings dialog
+     */
+    const handleToggleSettings = useCallback(() => {
+        if (settingsShown) {
+            settingsDialogRef.current?.close();
+            setSettingsShown(false);
+            return;
+        }
+        settingsDialogRef.current?.showModal();
+        setSettingsShown(true);
+    }, [settingsShown]);
+
     return (
         <main css={styles.appContainer}>
-            <dialog css={styles.tipsDialog} ref={tipsDialogRef}>
+            <dialog css={styles.modalDialog} ref={tipsDialogRef}>
                 {tipsShown ? <Tips closeHandler={handleToggleTips} /> : null}
+            </dialog>
+            <dialog css={styles.modalDialog} ref={settingsDialogRef}>
+                {settingsShown ? <Settings closeHandler={handleToggleSettings} /> : null}
             </dialog>
             <input
                 type="file"
@@ -237,12 +256,20 @@ export function App() {
                         onClick={handleToggleView}
                     />
                 </div>
-                <ActionButton
-                    label="Show Tips"
-                    title="Show markdown formatting tips"
-                    Icon={MdOutlineTipsAndUpdates}
-                    onClick={handleToggleTips}
-                />
+                <div css={styles.rightButtons}>
+                    <ActionButton
+                        label="Tips"
+                        title="Show markdown formatting tips"
+                        Icon={MdOutlineTipsAndUpdates}
+                        onClick={handleToggleTips}
+                    />
+                    <ActionButton
+                        label="Settings"
+                        title="Change settings"
+                        Icon={MdOutlineSettings}
+                        onClick={handleToggleSettings}
+                    />
+                </div>
             </div>
             <div css={styles.contentArea}>
                 <div

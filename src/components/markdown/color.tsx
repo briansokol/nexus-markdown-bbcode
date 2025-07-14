@@ -1,22 +1,21 @@
-import { type BBCodeComponentProps, Colors } from '@/types/components';
+import { useThemeManager } from '@/theme-manager/theme-manager';
+import type { ColorConfig } from '@/theme-manager/types';
+import { type BBCodeComponentProps } from '@/types/components';
+import { useMemo } from 'react';
 
 interface ColorProps extends BBCodeComponentProps {
-    textColor: Colors;
+    textColor: keyof ColorConfig;
 }
 
-const colorMap: Record<Colors, string> = {
-    [Colors.Red]: '#e06666',
-    [Colors.Green]: '#93c47d',
-    [Colors.Blue]: '#6fa8dc',
-    [Colors.Yellow]: '#ffd966',
-};
-
 export function Color({ mode, textColor, children }: ColorProps) {
+    const themeManager = useThemeManager();
+    const color = useMemo(() => themeManager.getColor(textColor), [themeManager, textColor]);
+
     return mode === 'bbcode' ? (
         <>
-            [color={colorMap[textColor]}]{children}[/color]
+            [color={color}]{children}[/color]
         </>
     ) : (
-        <span style={{ color: colorMap[textColor] }}>{children}</span>
+        <span style={{ color }}>{children}</span>
     );
 }

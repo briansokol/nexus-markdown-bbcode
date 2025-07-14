@@ -1,5 +1,5 @@
-import * as styles from '@/components/tips/tips.styles';
-import { MdExample } from './md-example';
+import { MdExample } from '@/components/tips/md-example';
+import * as modalStyles from '@/components/ui/modal.styles';
 
 interface TipsProps {
     closeHandler: () => void;
@@ -11,14 +11,14 @@ interface TipsProps {
  */
 export function Tips({ closeHandler }: TipsProps) {
     return (
-        <div css={styles.tipsContainer}>
-            <div css={styles.tipsHeader}>
+        <div css={modalStyles.modalContainer}>
+            <div css={modalStyles.modalHeader}>
                 <h1>Tips</h1>
-                <button type="button" css={styles.tipsClose} onClick={closeHandler}>
+                <button type="button" css={modalStyles.modalClose} onClick={closeHandler}>
                     &times;
                 </button>
             </div>
-            <div css={styles.tipsContent}>
+            <div css={modalStyles.modalContent}>
                 <p>
                     This tools supports CommonMark, Github-Flavored Markdown, and some custom
                     directives.

@@ -18,7 +18,7 @@ import { Strong } from '@/components/markdown/strong';
 import { Underline } from '@/components/markdown/underline';
 import { UnorderedList } from '@/components/markdown/unordered-list';
 import { YouTube, type YouTubeProps } from '@/components/markdown/youtube';
-import { Colors, type CustomDirective } from '@/types/components';
+import { type CustomDirective } from '@/types/components';
 import { useMemo } from 'react';
 import ReactMarkdown, { type Components } from 'react-markdown';
 import remarkDirective from 'remark-directive';
@@ -35,6 +35,9 @@ interface ExtendedComponents extends Components {
     green: Components['span'];
     blue: Components['span'];
     yellow: Components['span'];
+    purple: Components['span'];
+    orange: Components['span'];
+    pink: Components['span'];
     spoiler: Components['div'];
     right: Components['div'];
     youtube: CustomDirective<'div', YouTubeProps>;
@@ -98,16 +101,25 @@ export function Markdown({ markdownInput, mode }: MarkdownProps) {
                 return <Image mode={mode} {...props} />;
             },
             red({ node, ...props }) {
-                return <Color mode={mode} textColor={Colors.Red} {...props} />;
+                return <Color mode={mode} textColor="red" {...props} />;
             },
             green({ node, ...props }) {
-                return <Color mode={mode} textColor={Colors.Green} {...props} />;
+                return <Color mode={mode} textColor="green" {...props} />;
             },
             blue({ node, ...props }) {
-                return <Color mode={mode} textColor={Colors.Blue} {...props} />;
+                return <Color mode={mode} textColor="blue" {...props} />;
             },
             yellow({ node, ...props }) {
-                return <Color mode={mode} textColor={Colors.Yellow} {...props} />;
+                return <Color mode={mode} textColor="yellow" {...props} />;
+            },
+            purple({ node, ...props }) {
+                return <Color mode={mode} textColor="purple" {...props} />;
+            },
+            orange({ node, ...props }) {
+                return <Color mode={mode} textColor="orange" {...props} />;
+            },
+            pink({ node, ...props }) {
+                return <Color mode={mode} textColor="pink" {...props} />;
             },
             spoiler({ node, ...props }) {
                 return <Spoiler mode={mode} {...props} />;

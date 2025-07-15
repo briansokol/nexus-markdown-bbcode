@@ -1,5 +1,6 @@
 import { App } from '@/app.tsx';
 import { globalStyles } from '@/global.styles';
+import { ThemeProvider } from '@/theme/theme-provider';
 import { Global } from '@emotion/react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -11,6 +12,8 @@ if (!rootElement) {
 createRoot(rootElement).render(
     <StrictMode>
         <Global styles={globalStyles} />
-        <App />
+        <ThemeProvider>
+            <App />
+        </ThemeProvider>
     </StrictMode>,
 );

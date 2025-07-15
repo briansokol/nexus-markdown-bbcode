@@ -1,4 +1,4 @@
-import type { ThemeConfig } from '@/theme-manager/types';
+import type { ThemeConfig } from '@/theme/types';
 import type { ComponentType, JSX, ReactNode } from 'react';
 import type { ExtraProps } from 'react-markdown';
 

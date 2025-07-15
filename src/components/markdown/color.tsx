@@ -1,15 +1,15 @@
-import { useThemeManager } from '@/theme-manager/theme-manager';
-import type { ColorConfig } from '@/theme-manager/types';
+import { ThemeContext } from '@/theme/theme-context';
+import type { ColorConfig } from '@/theme/types';
 import { type BBCodeComponentProps } from '@/types/components';
-import { useMemo } from 'react';
+import { use, useMemo } from 'react';
 
 interface ColorProps extends BBCodeComponentProps {
     textColor: keyof ColorConfig;
 }
 
 export function Color({ mode, textColor, children }: ColorProps) {
-    const themeManager = useThemeManager();
-    const color = useMemo(() => themeManager.getColor(textColor), [themeManager, textColor]);
+    const theme = use(ThemeContext);
+    const color = useMemo(() => theme.getColor(textColor), [theme, textColor]);
 
     return mode === 'bbcode' ? (
         <>

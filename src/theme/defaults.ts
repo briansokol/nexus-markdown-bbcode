@@ -1,4 +1,4 @@
-import type { ThemeConfig } from '@/theme-manager/types';
+import type { ThemeConfig } from '@/theme/types';
 
 export const defaultTheme: ThemeConfig = {
     header: {

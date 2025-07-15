@@ -1,9 +1,9 @@
 import * as styles from '@/components/markdown/header.styles';
-import { fontFamilyMap } from '@/theme-manager/options';
-import { useThemeManager } from '@/theme-manager/theme-manager';
+import { fontFamilyMap } from '@/theme/options';
+import { ThemeContext } from '@/theme/theme-context';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
-import { useMemo, type JSX } from 'react';
+import { use, useMemo, type JSX } from 'react';
 
 interface HeaderProps extends BBCodeComponentProps {
     level: '1' | '2';
@@ -11,8 +11,11 @@ interface HeaderProps extends BBCodeComponentProps {
 
 export function Header({ mode, level, children, tempTheme }: HeaderProps) {
     const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-    const theme = useThemeManager(tempTheme);
-    const headerLevel = useMemo(() => theme.getHeaderLevel(level), [theme, level]);
+    const theme = use(ThemeContext);
+    const headerLevel = useMemo(
+        () => theme.getHeaderLevel(level, tempTheme),
+        [theme, level, tempTheme],
+    );
     const css = useMemo(() => {
         return styles.header(headerLevel, !tempTheme);
     }, [headerLevel, tempTheme]);

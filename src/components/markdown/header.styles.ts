@@ -1,5 +1,5 @@
-import { fontFamilyMap, sizeMap } from '@/theme-manager/options';
-import type { HeaderLevelConfig } from '@/theme-manager/types';
+import { fontFamilyMap, sizeMap } from '@/theme/options';
+import type { HeaderLevelConfig } from '@/theme/types';
 import { css } from '@emotion/react';
 
 export const header = (headerLevel: HeaderLevelConfig, includeMargin: boolean) => css`

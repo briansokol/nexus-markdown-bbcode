@@ -1,5 +1,5 @@
-import { sizeMap } from '@/theme-manager/options';
-import type { SizeOption } from '@/theme-manager/types';
+import { sizeMap } from '@/theme/options';
+import type { SizeOption } from '@/theme/types';
 import { css } from '@emotion/react';
 
 export const paragraph = (size: SizeOption, isCaption: boolean) => css`

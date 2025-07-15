@@ -1,22 +1,22 @@
 import * as styles from '@/components/markdown/paragraph.styles';
-import { useThemeManager } from '@/theme-manager/theme-manager';
+import { ThemeContext } from '@/theme/theme-context';
 import type { BBCodeComponentProps } from '@/types/components';
 import { useCleanChildren } from '@/utils/bbcode';
-import { useMemo } from 'react';
+import { use, useMemo } from 'react';
 
 interface ParagraphProps extends BBCodeComponentProps {
     caption?: boolean;
 }
 
-export function Paragraph({ mode, children = '', caption }: ParagraphProps) {
+export function Paragraph({ mode, children = '', caption, tempTheme }: ParagraphProps) {
     const cleanChildren = useCleanChildren(children);
-    const theme = useThemeManager();
+    const theme = use(ThemeContext);
     const css = useMemo(() => {
-        return styles.paragraph(theme.getParagraphSize(), caption ?? false);
-    }, [caption, theme]);
+        return styles.paragraph(theme.getParagraphSize(tempTheme), caption ?? false);
+    }, [caption, tempTheme, theme]);
     const size = useMemo(() => {
-        return caption ? theme.getCaptionSize() : theme.getParagraphSize();
-    }, [caption, theme]);
+        return caption ? theme.getCaptionSize(tempTheme) : theme.getParagraphSize(tempTheme);
+    }, [caption, tempTheme, theme]);
 
     return mode === 'bbcode' ? (
         <>

@@ -1,9 +1,9 @@
 import { Header } from '@/components/markdown/header';
 import * as styles from '@/components/settings/theme-form.styles';
-import { fontFamilyList, sizeList } from '@/theme-manager/options';
-import { useThemeManager } from '@/theme-manager/theme-manager';
-import type { ColorConfig, HeaderLevelConfig, SizeOption, fontFamily } from '@/theme-manager/types';
-import { type ReactElement, useCallback, useState } from 'react';
+import { fontFamilyList, sizeList } from '@/theme/options';
+import { ThemeContext } from '@/theme/theme-context';
+import type { ColorConfig, HeaderLevelConfig, SizeOption, fontFamily } from '@/theme/types';
+import { type ReactElement, use, useCallback, useState } from 'react';
 
 interface ThemeFormProps {
     closeHandler: () => void;
@@ -14,8 +14,8 @@ interface ThemeFormProps {
  * Allows users to customize header styles, colors, and text sizes
  */
 export function ThemeForm({ closeHandler }: ThemeFormProps) {
-    const themeManager = useThemeManager();
-    const [config, setConfig] = useState(() => themeManager.getConfig());
+    const theme = use(ThemeContext);
+    const [config, setConfig] = useState(() => theme.getConfig());
 
     /**
      * Handle changes to header level configuration
@@ -79,19 +79,19 @@ export function ThemeForm({ closeHandler }: ThemeFormProps) {
      * Save the current configuration to the theme manager
      */
     const handleSave = useCallback((): void => {
-        themeManager.setConfig(config);
+        theme.setConfig(config);
         closeHandler();
-    }, [closeHandler, config, themeManager]);
+    }, [closeHandler, config, theme]);
 
     /**
      * Reset configuration to default values
      */
     const handleReset = useCallback((): void => {
         if (confirm('Are you sure you want to reset theme settings? This cannot be undone.')) {
-            themeManager.resetConfigToDefaults();
-            setConfig(themeManager.getConfig());
+            theme.resetConfigToDefaults();
+            setConfig(theme.getConfig());
         }
-    }, [themeManager]);
+    }, [theme]);
 
     /**
      * Render a header level configuration section
